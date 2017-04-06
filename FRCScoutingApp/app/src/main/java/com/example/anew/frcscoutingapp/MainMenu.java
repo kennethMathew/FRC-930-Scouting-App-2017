@@ -8,24 +8,25 @@ import android.view.View;
 import android.content.Intent;
 
 public class MainMenu extends AppCompatActivity {
-
+    Button scouter, master, settings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        onButtonClickListener();
+        onClickListenerMainMenu();
     }
 
-        public void onButtonClickListener() {
-        Button scouter, master, settings;
+    public void onClickListenerMainMenu() {
+
         scouter = (Button)findViewById(R.id.scouter);
         master = (Button)findViewById(R.id.master);
         settings = (Button)findViewById(R.id.settings);
-        scouter.setOnClickListener(
+
+            scouter.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainMenu.this, ScouterPreScoutMenu.class);
+                        Intent intent = new Intent(MainMenu.this, ScouterMenu.class);
                         startActivity(intent);
 
                     }
@@ -36,7 +37,7 @@ public class MainMenu extends AppCompatActivity {
                     new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(MainMenu.this, ScouterPreScoutMenu.class);
+                            Intent intent = new Intent(MainMenu.this, ScouterMenu.class);
                             startActivity(intent);
 
                         }
@@ -47,7 +48,7 @@ public class MainMenu extends AppCompatActivity {
                     new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(MainMenu.this, ScouterPreScoutMenu.class);
+                            Intent intent = new Intent(MainMenu.this, ScouterMenu.class);
                             startActivity(intent);
 
                         }

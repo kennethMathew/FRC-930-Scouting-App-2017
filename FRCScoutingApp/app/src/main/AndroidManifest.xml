@@ -16,7 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ScouterPreScoutMenu"></activity>
+        <activity android:name=".ScouterPreScoutMenu" />
+        <activity android:name=".ScouterMenu" />
+        <activity android:name=".PreMatchMenu" />
+        <activity android:name=".AutonMenu" />
+        <activity android:name=".TeleopMenu" />
+        <activity android:name=".PostMatchMenu"></activity>
     </application>
 
 </manifest>
