@@ -9,8 +9,8 @@
     android:layout_alignParentStart="true"
     tools:context="com.example.anew.frcscoutingapp.AutonMenu">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:orientation="vertical"
@@ -21,12 +21,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="36dp"
                     android:text="Back"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="HardcodedText,RtlHardcoded" />
+                    tools:ignore="HardcodedText,RtlHardcoded"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
 
         <Button
             android:id="@+id/goToTeleop"
@@ -41,5 +42,5 @@
             tools:layout_constraintBottom_creator="1"
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintRight_creator="1" />
-    </LinearLayout>
+    </RelativeLayout>
 </ScrollView>
