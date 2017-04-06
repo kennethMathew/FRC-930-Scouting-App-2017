@@ -22,7 +22,8 @@
         <activity android:name=".AutonMenu" />
         <activity android:name=".TeleopMenu" />
         <activity android:name=".PostMatchMenu" />
-        <activity android:name=".QRStager"></activity>
+        <activity android:name=".QRStager" />
+        <activity android:name=".QRDeployer"></activity>
     </application>
 
 </manifest>

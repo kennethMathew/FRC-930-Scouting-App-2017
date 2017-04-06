@@ -36,7 +36,7 @@ public class ScouterMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(ScouterMenu.this, ScouterMenu.class);
+                        Intent intent = new Intent(ScouterMenu.this, QRStager.class);
                         startActivity(intent);
 
                     }

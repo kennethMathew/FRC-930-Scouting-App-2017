@@ -6,36 +6,36 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PostMatchMenu extends AppCompatActivity {
-        Button backPostMatchMenu, submitMatchData;
+public class QRDeployer extends AppCompatActivity {
+        Button backQRDeployer, doneWithCode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_post_match_menu);
-        onClickListenerPostMatchMenu();
+        setContentView(R.layout.activity_qrdeployer);
+        onClickListenerQRDeployer();
     }
-    public void onClickListenerPostMatchMenu() {
+    public void onClickListenerQRDeployer() {
 
-        backPostMatchMenu = (Button) findViewById(R.id.backPostMatchMenu);
-        submitMatchData = (Button) findViewById(R.id.submitMatchData);
+        backQRDeployer = (Button) findViewById(R.id.backQRDeployer);
+        doneWithCode = (Button) findViewById(R.id.doneWithCode);
 
 
-        submitMatchData.setOnClickListener(
+        doneWithCode.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(PostMatchMenu.this,ScouterMenu.class);
+                        Intent intent = new Intent(QRDeployer.this,ScouterMenu.class);
                         startActivity(intent);
 
                     }
                 }
 
         );
-        backPostMatchMenu.setOnClickListener(
+        backQRDeployer.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(PostMatchMenu.this, TeleopMenu.class);
+                        Intent intent = new Intent(QRDeployer.this, QRStager.class);
                         startActivity(intent);
 
                     }
