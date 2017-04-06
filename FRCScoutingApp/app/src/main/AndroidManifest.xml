@@ -21,7 +21,8 @@
         <activity android:name=".PreMatchMenu" />
         <activity android:name=".AutonMenu" />
         <activity android:name=".TeleopMenu" />
-        <activity android:name=".PostMatchMenu"></activity>
+        <activity android:name=".PostMatchMenu" />
+        <activity android:name=".QRStager"></activity>
     </application>
 
 </manifest>
