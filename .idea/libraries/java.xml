@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../zxing/android-core/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../zxing/android/src" />
+      <root url="file://$PROJECT_DIR$/../../zxing/core/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../zxing/glass/src" />
+      <root url="file://$PROJECT_DIR$/../../zxing/javase/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../zxing/zxing.appspot.com/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../zxing/zxingorg/src/main/java" />
+    </SOURCES>
+  </library>
+</component>
