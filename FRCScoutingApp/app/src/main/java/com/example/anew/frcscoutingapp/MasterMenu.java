@@ -6,48 +6,47 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ScouterMenu extends AppCompatActivity {
-        Button startMatch, genQR, backScouterMenu;
+public class MasterMenu extends AppCompatActivity {
+        Button backMasterMenu, scanCode, viewDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scouter_menu2);
-        onClickListenerScouterMenu();
-
+        setContentView(R.layout.activity_master_menu);
+        onClickListenerMasterMenu();
     }
-    public void onClickListenerScouterMenu() {
+    public void onClickListenerMasterMenu() {
 
-        startMatch = (Button)findViewById(R.id.startScouting);
-        genQR = (Button)findViewById(R.id.viewDatabase);
-        backScouterMenu = (Button)findViewById(R.id.backScouterMenu);
+        backMasterMenu = (Button)findViewById(R.id.backMasterMenu);
+        scanCode = (Button)findViewById(R.id.scanCode);
+        viewDatabase = (Button)findViewById(R.id.viewDatabase);
 
-        startMatch.setOnClickListener(
+        scanCode.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(ScouterMenu.this, PreMatchMenu.class);
+                        Intent intent = new Intent(MasterMenu.this, PreMatchMenu.class);
                         startActivity(intent);
 
                     }
                 }
 
         );
-        genQR.setOnClickListener(
+        viewDatabase.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(ScouterMenu.this, QRStager.class);
+                        Intent intent = new Intent(MasterMenu.this, QRStager.class);
                         startActivity(intent);
 
                     }
                 }
 
         );
-        backScouterMenu.setOnClickListener(
+        backMasterMenu.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(ScouterMenu.this, MainMenu.class);
+                        Intent intent = new Intent(MasterMenu.this, MainMenu.class);
                         startActivity(intent);
 
                     }
@@ -58,4 +57,3 @@ public class ScouterMenu extends AppCompatActivity {
 
     }
 }
-

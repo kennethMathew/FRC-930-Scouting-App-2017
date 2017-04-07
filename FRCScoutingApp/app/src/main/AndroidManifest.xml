@@ -23,7 +23,10 @@
         <activity android:name=".TeleopMenu" />
         <activity android:name=".PostMatchMenu" />
         <activity android:name=".QRStager" />
-        <activity android:name=".QRDeployer"></activity>
+        <activity android:name=".QRDeployer" />
+        <activity android:name=".MasterMenu" />
+        <activity android:name=".MasterScanner" />
+        <activity android:name=".MasterStager"></activity>
     </application>
 
 </manifest>
