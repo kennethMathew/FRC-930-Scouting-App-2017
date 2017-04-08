@@ -12,7 +12,7 @@ public class AutonMenu2 extends AppCompatActivity {
     Button backAutonMenu2, goToTeleop, mainMenu;
     ToggleButton crossBaseline;
     ImageButton subtractFoulsAuton, addFoulsAuton, subtractTechFoulsAuton, addTechFoulsAuton, subtractRoboErrorsAuton, addRoboErrorsAuton;
-    Integer numFouls, numTechFouls, numRoboErrors;
+    Integer numFouls = 0, numTechFouls = 0, numRoboErrors = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -130,7 +130,7 @@ public class AutonMenu2 extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        
+
                     }
                 }
 
