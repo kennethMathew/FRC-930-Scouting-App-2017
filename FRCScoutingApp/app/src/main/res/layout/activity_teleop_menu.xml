@@ -10,7 +10,7 @@
         android:id="@+id/goToTeleop2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="16dp"
         android:text="Continue To Teleop 2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -18,7 +18,8 @@
         tools:ignore="HardcodedText"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintHorizontal_bias="0.502" />
 
     <Button
         android:id="@+id/mainMenu"
@@ -42,5 +43,130 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/balls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balls"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <TextView
+        android:id="@+id/gears"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gears"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="312dp" />
+
+    <ToggleButton
+        android:id="@+id/ballsTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:textOff="Start"
+        android:textOn="Stop"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="185dp" />
+
+    <ToggleButton
+        android:id="@+id/gearsTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:textOff="Start"
+        android:textOn="Stop"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="323dp" />
+
+    <TextView
+        android:id="@+id/ballsTeleop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Balls"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+    <TextView
+        android:id="@+id/gearsTeleop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Gears"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="383dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="55dp"
+        android:layout_height="53dp"
+        app:srcCompat="@android:drawable/button_onoff_indicator_on"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="252dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="55dp"
+        android:layout_height="53dp"
+        app:srcCompat="@android:drawable/button_onoff_indicator_on"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+    <RadioGroup
+        android:layout_width="119dp"
+        android:layout_height="149dp"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="64dp">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="116dp"
+            tools:layout_editor_absoluteX="123dp"
+            tools:layout_editor_absoluteY="64dp">
+
+            <RadioButton
+                android:id="@+id/noAttemptBallsTeleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No Attempt" />
+
+            <RadioButton
+                android:id="@+id/lowGoalTeleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Low" />
+
+            <RadioButton
+                android:id="@+id/highGoalTeleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="High" />
+        </RadioGroup>
+    </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>
