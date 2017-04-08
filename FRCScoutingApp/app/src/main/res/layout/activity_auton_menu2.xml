@@ -59,6 +59,7 @@
         android:text="ToggleButton"
         android:textOff="Yes"
         android:textOn="No"
+        android:onClick="Change"
         tools:layout_editor_absoluteX="266dp"
         tools:layout_editor_absoluteY="96dp" />
 

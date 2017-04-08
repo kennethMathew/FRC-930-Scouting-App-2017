@@ -131,7 +131,6 @@ public class AutonMenu2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         
-
                     }
                 }
 
