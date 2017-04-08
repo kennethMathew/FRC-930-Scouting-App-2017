@@ -7,9 +7,22 @@
     tools:context="com.example.anew.frcscoutingapp.AutonMenu">
 
     <Button
+        android:id="@+id/backAutonMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <Button
         android:id="@+id/mainMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
         android:text="Main Menu"
@@ -18,29 +31,16 @@
 
     <Button
         android:id="@+id/goToTeleop"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:text="Continue To Teleop"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="52dp"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="46dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <Button
-        android:id="@+id/backAutonMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Back"
+        android:layout_marginBottom="30dp"
+        android:text="Continue To Teleop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText"
+        tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintRight_creator="1" />
 
 </android.support.constraint.ConstraintLayout>

@@ -21,11 +21,12 @@ public class AutonMenu extends AppCompatActivity {
         mainMenu = (Button) findViewById(R.id.mainMenu);
 
 
+
         goToTeleop.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(AutonMenu.this,TeleopMenu.class);
+                        Intent intent = new Intent (AutonMenu.this,TeleopMenu.class);
                         startActivity(intent);
 
                     }
@@ -43,7 +44,6 @@ public class AutonMenu extends AppCompatActivity {
                 }
 
         );
-
         mainMenu.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -57,4 +57,3 @@ public class AutonMenu extends AppCompatActivity {
         );
     }
 }
-
