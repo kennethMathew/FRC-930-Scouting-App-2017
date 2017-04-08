@@ -21,7 +21,7 @@
         android:id="@+id/goToPostMatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="16dp"
         android:text="Continue To Post-Match"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -29,7 +29,8 @@
         tools:ignore="HardcodedText"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintHorizontal_bias="0.502" />
 
     <Button
         android:id="@+id/backTeleopMenu2"
@@ -42,5 +43,171 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rope"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="89dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:textOff="Yes"
+        android:textOn="No"
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="74dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Climb Time"
+        android:inputType="text"
+        android:text="Climb Time"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Human Errors:"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="328dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Fouls:"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Robot Errors:"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="392dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Tech Fouls:"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="269dp"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="328dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="392dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="312dp"
+        tools:layout_editor_absoluteY="255dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="312dp"
+        tools:layout_editor_absoluteY="312dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="312dp"
+        tools:layout_editor_absoluteY="377dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="312dp"
+        tools:layout_editor_absoluteY="203dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        app:srcCompat="@android:drawable/button_onoff_indicator_on"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="198dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton19"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        app:srcCompat="@android:drawable/button_onoff_indicator_on"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="377dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton18"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        app:srcCompat="@android:drawable/button_onoff_indicator_on"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="312dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton17"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        app:srcCompat="@android:drawable/button_onoff_indicator_on"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="255dp" />
 
 </android.support.constraint.ConstraintLayout>

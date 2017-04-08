@@ -33,7 +33,7 @@
         android:id="@+id/goToAuton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="16dp"
         android:text="Continue To Teleop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -45,16 +45,15 @@
 
     <SeekBar
         android:id="@+id/ballAccuracy"
-        android:layout_width="242dp"
-        android:layout_height="21dp"
+        android:layout_width="229dp"
+        android:layout_height="25dp"
         android:layout_marginEnd="47dp"
-        android:layout_marginRight="82dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="254dp"
         android:max="100"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteX="139dp" />
 
     <TextView
         android:id="@+id/gears"
@@ -63,7 +62,7 @@
         android:text="Gears"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="287dp" />
+        tools:layout_editor_absoluteY="310dp" />
 
     <TextView
         android:id="@+id/balls"
@@ -74,39 +73,55 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="109dp" />
 
+    <TextView
+        android:id="@+id/accuracy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accuracy"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="250dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
+        app:srcCompat="@android:drawable/button_onoff_indicator_on"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="191dp"
+        android:text="# of Balls:"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="122dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="42dp"
+        android:layout_height="44dp"
+        android:text="0"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="191dp" />
+
     <RadioGroup
-        android:layout_width="122dp"
-        android:layout_height="144dp"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="64dp" >
-
-        <RadioButton
-            android:id="@+id/noAttemptBallsAuton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="No Attempt" />
-
-        <RadioButton
-            android:id="@+id/lowGoalAuton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Low" />
-
-        <RadioButton
-            android:id="@+id/highGoalAuton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="High" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:layout_width="131dp"
-        android:layout_height="158dp"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="275dp" >
+        android:layout_width="133dp"
+        android:layout_height="114dp"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="321dp">
 
         <RadioButton
             android:id="@+id/noAttemptGearsAuton"
@@ -130,28 +145,32 @@
             android:text="Scored" />
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/accuracy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Accuracy"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="224dp" />
+    <RadioGroup
+        android:layout_width="126dp"
+        android:layout_height="111dp"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="57dp">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_input_add"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="80dp" />
+        <RadioButton
+            android:id="@+id/noAttemptBallsAuton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="No Attempt" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="57dp"
-        android:layout_height="55dp"
-        app:srcCompat="@android:drawable/button_onoff_indicator_on"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="132dp" />
+        <RadioButton
+            android:id="@+id/lowGoalAuton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Low" />
+
+        <RadioButton
+            android:id="@+id/highGoalAuton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="High" />
+    </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>
