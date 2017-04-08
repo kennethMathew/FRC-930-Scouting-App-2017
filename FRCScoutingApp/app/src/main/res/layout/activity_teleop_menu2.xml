@@ -54,7 +54,7 @@
         tools:layout_editor_absoluteY="89dp" />
 
     <ToggleButton
-        android:id="@+id/toggleButton"
+        android:id="@+id/rope"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ToggleButton"
@@ -64,7 +64,7 @@
         tools:layout_editor_absoluteY="74dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/climbTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -111,7 +111,7 @@
         tools:layout_editor_absoluteY="272dp" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/numFoulsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
@@ -120,7 +120,7 @@
         tools:layout_editor_absoluteY="215dp" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/numTechFoulsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
@@ -129,7 +129,7 @@
         tools:layout_editor_absoluteY="272dp" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/numHumanErrors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
@@ -138,7 +138,7 @@
         tools:layout_editor_absoluteY="328dp" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/numRoboErrorsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
@@ -147,7 +147,7 @@
         tools:layout_editor_absoluteY="392dp" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/addTechFoulsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_input_add"
@@ -155,7 +155,7 @@
         tools:layout_editor_absoluteY="255dp" />
 
     <ImageButton
-        android:id="@+id/imageButton16"
+        android:id="@+id/addHumanErrors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_input_add"
@@ -163,7 +163,7 @@
         tools:layout_editor_absoluteY="312dp" />
 
     <ImageButton
-        android:id="@+id/imageButton15"
+        android:id="@+id/addRoboErrorsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_input_add"
@@ -171,7 +171,7 @@
         tools:layout_editor_absoluteY="377dp" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/addFoulsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_input_add"
@@ -179,7 +179,7 @@
         tools:layout_editor_absoluteY="203dp" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/subtractFoulsTeleop"
         android:layout_width="58dp"
         android:layout_height="57dp"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
@@ -187,7 +187,7 @@
         tools:layout_editor_absoluteY="198dp" />
 
     <ImageButton
-        android:id="@+id/imageButton19"
+        android:id="@+id/subtractRoboErrorsTeleop"
         android:layout_width="58dp"
         android:layout_height="57dp"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
@@ -195,7 +195,7 @@
         tools:layout_editor_absoluteY="377dp" />
 
     <ImageButton
-        android:id="@+id/imageButton18"
+        android:id="@+id/subtractHumanErrors"
         android:layout_width="58dp"
         android:layout_height="57dp"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
@@ -203,7 +203,7 @@
         tools:layout_editor_absoluteY="312dp" />
 
     <ImageButton
-        android:id="@+id/imageButton17"
+        android:id="@+id/subtractTechFoulsTeleop"
         android:layout_width="58dp"
         android:layout_height="57dp"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"

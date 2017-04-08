@@ -86,52 +86,52 @@
         android:id="@+id/ballsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="# of Balls"
+        android:text="# of Balls:"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="252dp" />
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="253dp" />
 
     <TextView
         android:id="@+id/gearsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="# of Gears"
+        android:text="# of Gears:"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteX="119dp"
         tools:layout_editor_absoluteY="383dp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/addGearsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_input_add"
-        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteX="275dp"
         tools:layout_editor_absoluteY="371dp" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/subtractGearsTeleop"
         android:layout_width="55dp"
         android:layout_height="53dp"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
-        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteX="47dp"
         tools:layout_editor_absoluteY="371dp" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/addBallsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_input_add"
-        tools:layout_editor_absoluteX="252dp"
+        tools:layout_editor_absoluteX="275dp"
         tools:layout_editor_absoluteY="241dp" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/subtractBallsTeleop"
         android:layout_width="55dp"
         android:layout_height="53dp"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
-        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteX="47dp"
         tools:layout_editor_absoluteY="241dp" />
 
     <RadioGroup
@@ -168,5 +168,23 @@
                 android:text="High" />
         </RadioGroup>
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/numBallsTeleop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <TextView
+        android:id="@+id/numGearsTeleop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="383dp" />
 
 </android.support.constraint.ConstraintLayout>

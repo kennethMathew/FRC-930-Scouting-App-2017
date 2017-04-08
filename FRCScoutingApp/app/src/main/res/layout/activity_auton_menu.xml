@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Continue To Teleop"
+        android:text="Continue To Auton 2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -83,7 +83,7 @@
         tools:layout_editor_absoluteY="250dp" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/addBallsAuton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_input_add"
@@ -91,7 +91,7 @@
         tools:layout_editor_absoluteY="180dp" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/subtractBallsAuton"
         android:layout_width="57dp"
         android:layout_height="55dp"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
@@ -109,7 +109,7 @@
         tools:layout_editor_absoluteX="122dp" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/numBallsAuton"
         android:layout_width="42dp"
         android:layout_height="44dp"
         android:text="0"
