@@ -4,19 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.anew.frcscoutingapp.AutonMenu">
-
-    <Button
-        android:id="@+id/backAutonMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Back"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,RtlHardcoded" />
+    tools:context="com.example.anew.frcscoutingapp.TeleopMenu2">
 
     <Button
         android:id="@+id/mainMenu"
@@ -30,11 +18,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/goToAuton2"
+        android:id="@+id/goToPostMatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="Continue To Teleop"
+        android:text="Continue To Post-Match"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -43,17 +31,16 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1" />
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="242dp"
-        android:layout_height="21dp"
-        android:max="100"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginEnd="47dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="-39dp"
+    <Button
+        android:id="@+id/backTeleopMenu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Back"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="339dp" />
+        tools:ignore="HardcodedText,RtlHardcoded" />
 
 </android.support.constraint.ConstraintLayout>

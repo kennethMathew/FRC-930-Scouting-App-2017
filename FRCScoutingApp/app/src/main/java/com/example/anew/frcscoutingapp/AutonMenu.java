@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class AutonMenu extends AppCompatActivity {
-    Button backAutonMenu, goToTeleop, mainMenu;
+    Button backAutonMenu, goToAuton2, mainMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,16 +17,16 @@ public class AutonMenu extends AppCompatActivity {
     public void onClickListenerAutonMenu() {
 
         backAutonMenu = (Button) findViewById(R.id.backAutonMenu);
-        goToTeleop = (Button) findViewById(R.id.goToTeleop);
+        goToAuton2 = (Button) findViewById(R.id.goToAuton2);
         mainMenu = (Button) findViewById(R.id.mainMenu);
 
 
 
-        goToTeleop.setOnClickListener(
+        goToAuton2.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent (AutonMenu.this,TeleopMenu.class);
+                        Intent intent = new Intent (AutonMenu.this,AutonMenu2.class);
                         startActivity(intent);
 
                     }

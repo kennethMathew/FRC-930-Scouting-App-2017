@@ -27,7 +27,10 @@
         <activity android:name=".MasterStager" />
         <activity android:name=".SettingsMenu" />
         <activity android:name=".AutonMenu" />
-        <activity android:name=".TeleopMenu"></activity>
+        <activity android:name=".TeleopMenu" />
+        <activity android:name=".Teleop_2" />
+        <activity android:name=".AutonMenu2" />
+        <activity android:name=".TeleopMenu2"></activity>
     </application>
 
 </manifest>

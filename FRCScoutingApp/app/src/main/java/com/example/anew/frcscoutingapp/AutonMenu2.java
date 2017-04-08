@@ -6,38 +6,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class TeleopMenu extends AppCompatActivity {
-    Button backTeleopMenu, goToTeleop2, mainMenu;
+public class AutonMenu2 extends AppCompatActivity {
+    Button backAutonMenu2, goToTeleop, mainMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teleop_menu);
-        onClickListenerTeleopMenu();
+        setContentView(R.layout.activity_auton_menu2);
+        onClickListenerAutonMenu2();
     }
-    public void onClickListenerTeleopMenu() {
+    public void onClickListenerAutonMenu2() {
 
-        backTeleopMenu = (Button) findViewById(R.id.backTeleopMenu);
-        goToTeleop2 = (Button) findViewById(R.id.goToTeleop2);
+        backAutonMenu2 = (Button) findViewById(R.id.backAutonMenu2);
+        goToTeleop = (Button) findViewById(R.id.goToTeleop);
         mainMenu = (Button) findViewById(R.id.mainMenu);
 
 
 
-        goToTeleop2.setOnClickListener(
+        goToTeleop.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(TeleopMenu.this,TeleopMenu2.class);
+                        Intent intent = new Intent (AutonMenu2.this,TeleopMenu.class);
                         startActivity(intent);
 
                     }
                 }
 
         );
-        backTeleopMenu.setOnClickListener(
+        backAutonMenu2.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(TeleopMenu.this, AutonMenu.class);
+                        Intent intent = new Intent(AutonMenu2.this, PreMatchMenu.class);
                         startActivity(intent);
 
                     }
@@ -48,7 +48,7 @@ public class TeleopMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(TeleopMenu.this, MainMenu.class);
+                        Intent intent = new Intent(AutonMenu2.this, MainMenu.class);
                         startActivity(intent);
 
                     }
