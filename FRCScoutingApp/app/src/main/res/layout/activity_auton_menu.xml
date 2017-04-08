@@ -43,4 +43,12 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1" />
 
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="242dp"
+        android:layout_height="21dp"
+        android:max="100"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="182dp" />
+
 </android.support.constraint.ConstraintLayout>
