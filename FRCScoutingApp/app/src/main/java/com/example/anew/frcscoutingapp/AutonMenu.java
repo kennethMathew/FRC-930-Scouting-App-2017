@@ -9,13 +9,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class AutonMenu extends AppCompatActivity {
-    Button backAutonMenu, goToAuton2, mainMenu;
+    Button backAutonMenu, goToAuton2, mainMenuAuton;
     ImageButton addBallsAuton, subtractBallsAuton;
-    Integer numBallsAuton, progressAuton;
+    Integer numBallsAuton;
     RadioButton ballRadioButton, gearRadioButton;
     RadioGroup ballGroupAuton, gearGroupAuton;
     TextView numBallAccuracy;
@@ -26,7 +25,6 @@ public class AutonMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auton_menu);
         numBallsAuton = 0;
-        progressAuton = 20;
         autonMenu();
 
     }
@@ -34,7 +32,7 @@ public class AutonMenu extends AppCompatActivity {
 
         backAutonMenu = (Button) findViewById(R.id.backAutonMenu);
         goToAuton2 = (Button) findViewById(R.id.goToAuton2);
-        mainMenu = (Button) findViewById(R.id.mainMenu);
+        mainMenuAuton = (Button) findViewById(R.id.mainMenu);
 
         addBallsAuton = (ImageButton) findViewById(R.id.addBallsAuton);
         subtractBallsAuton = (ImageButton) findViewById(R.id.subtractBallsAuton);
@@ -81,7 +79,7 @@ public class AutonMenu extends AppCompatActivity {
                 }
 
         );
-        mainMenu.setOnClickListener(
+        mainMenuAuton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
