@@ -47,7 +47,7 @@ public class TeleopMenu2 extends AppCompatActivity {
 
         climbYesNo = (Switch)findViewById(R.id.climbYesNo);
 
-        
+
 
         goToPostMatch.setOnClickListener(
                 new View.OnClickListener() {
