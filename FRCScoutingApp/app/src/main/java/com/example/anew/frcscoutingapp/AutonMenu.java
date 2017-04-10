@@ -1,5 +1,6 @@
 package com.example.anew.frcscoutingapp;
 
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,13 +13,16 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class AutonMenu extends AppCompatActivity {
+
+
     Button backAutonMenu, goToAuton2, mainMenuAuton;
     ImageButton addBallsAuton, subtractBallsAuton;
-    Integer numBallsAuton;
+    Integer numBallsAuton, gearStatus, ballStatus;
     RadioButton ballRadioButton, gearRadioButton;
     RadioGroup ballGroupAuton, gearGroupAuton;
     TextView numBallAccuracy;
     EditText shooterAccuracy;
+    String ballStatusAuton, gearStatusAuton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,31 +42,35 @@ public class AutonMenu extends AppCompatActivity {
         subtractBallsAuton = (ImageButton) findViewById(R.id.subtractBallsAuton);
 
         ballGroupAuton = (RadioGroup) findViewById(R.id.ballGroupAuton);
-        ballRadioButton = (RadioButton) findViewById(R.id.highGoalAuton);
+        ballRadioButton = (RadioButton) findViewById(R.id.lowGoalAuton);
 
         gearGroupAuton = (RadioGroup) findViewById(R.id.gearGroupAuton);
-        gearRadioButton = (RadioButton) findViewById(R.id.scoredGearsAuton);
+        gearRadioButton = (RadioButton) findViewById(R.id.notScoredGearsAuton);
 
         shooterAccuracy = (EditText) findViewById(R.id.shooterAccuracy);
 
+        numBallAccuracy = (TextView) findViewById(R.id.numBallsAuton);
 
         goToAuton2.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int ballStatus = ballGroupAuton.getCheckedRadioButtonId();
+
+                        ballStatus = ballGroupAuton.getCheckedRadioButtonId();
                         ballRadioButton = (RadioButton)findViewById(ballStatus);
+                        ballStatusAuton  = ballGroupAuton.toString();
 
-                        int gearStatus = gearGroupAuton.getCheckedRadioButtonId();
+                        gearStatus = gearGroupAuton.getCheckedRadioButtonId();
                         gearRadioButton = (RadioButton)findViewById(gearStatus);
+                        gearStatusAuton  = gearGroupAuton.toString();
 
-                        String ballStatusAuton  = ballRadioButton.getText().toString() + ",";
-                        String gearStatusAuton  = gearRadioButton.getText().toString() + ",";
+
                         String numOfBallsShot   = numBallsAuton.toString() + ",";
-                        String shootingAccuracy = shooterAccuracy.getText().toString() + ",";
+                        String shootingAccuracy = shooterAccuracy.getText().toString();
 
                         Intent intent = new Intent (AutonMenu.this, AutonMenu2.class);
                         startActivity(intent);
+
 
                     }
                 }

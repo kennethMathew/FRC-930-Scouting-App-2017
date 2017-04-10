@@ -78,6 +78,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent intent = new Intent(AutonMenu2.this, AutonMenu.class);
                         startActivity(intent);
+                        
 
                     }
                 }
