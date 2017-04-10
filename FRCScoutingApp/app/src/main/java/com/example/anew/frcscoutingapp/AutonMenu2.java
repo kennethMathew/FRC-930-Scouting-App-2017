@@ -101,7 +101,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         numFouls = numFouls - 1;
-                        numFoulsAuton.setText(numFouls);
+                        numFoulsAuton.setText(Integer.toString(numFouls));
 
                     }
                 }
@@ -113,7 +113,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         numFouls = numFouls + 1;
-                        numFoulsAuton.setText(numFouls);
+                        numFoulsAuton.setText(Integer.toString(numFouls));
                     }
                 }
 
@@ -124,7 +124,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         numTechFouls = numTechFouls - 1;
-                        numTechFoulsAuton.setText(numTechFouls);
+                        numTechFoulsAuton.setText(Integer.toString(numTechFouls));
                     }
                 }
 
@@ -135,7 +135,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         numTechFouls = numTechFouls + 1;
-                        numTechFoulsAuton.setText(numTechFouls);
+                        numTechFoulsAuton.setText(Integer.toString(numTechFouls));
                     }
                 }
 
@@ -146,7 +146,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         numRoboErrors = numRoboErrors - 1;
-                        numRoboErrorsAuton.setText(numRoboErrors);
+                        numRoboErrorsAuton.setText(Integer.toString(numRoboErrors));
                     }
                 }
 
@@ -156,7 +156,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         numRoboErrors = numRoboErrors + 1;
-                        numRoboErrorsAuton.setText(numRoboErrors);
+                        numRoboErrorsAuton.setText(Integer.toString(numRoboErrors));
                     }
                 }
 

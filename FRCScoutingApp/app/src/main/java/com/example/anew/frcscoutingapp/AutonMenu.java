@@ -65,7 +65,7 @@ public class AutonMenu extends AppCompatActivity {
                         gearStatusAuton  = gearGroupAuton.toString();
 
 
-                        String numOfBallsShot   = numBallsAuton.toString() + ",";
+                        String numOfBallsShot   = numBallsAuton.toString();
                         String shootingAccuracy = shooterAccuracy.getText().toString();
 
                         Intent intent = new Intent (AutonMenu.this, AutonMenu2.class);
