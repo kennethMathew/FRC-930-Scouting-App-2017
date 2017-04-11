@@ -81,7 +81,7 @@ public class PreMatchMenu extends AppCompatActivity {
                     blueAlliance.setBackgroundColor(Color.parseColor("#ffffff"));
                     allianceSelector.setBackgroundColor(Color.parseColor("#FF0000"));
                     greenAlliance = greenAlliance + 1;
-                    if (greenAlliance >= 75){
+                    if (greenAlliance >= 50){
                         redAlliance.setBackgroundColor(Color.parseColor("#008000"));
                         blueAlliance.setBackgroundColor(Color.parseColor("#008000"));
                         view.setBackgroundColor(Color.parseColor("#008000"));
@@ -97,7 +97,7 @@ public class PreMatchMenu extends AppCompatActivity {
                     redAlliance.setBackgroundColor(Color.parseColor("#ffffff"));
                     allianceSelector.setBackgroundColor(Color.parseColor("#0000ff"));
                     greenAlliance = greenAlliance + 1;
-                    if (greenAlliance >= 75){
+                    if (greenAlliance >= 50){
                         redAlliance.setBackgroundColor(Color.parseColor("#008000"));
                         blueAlliance.setBackgroundColor(Color.parseColor("#008000"));
                         allianceSelector.setBackgroundColor(Color.parseColor("#008000"));
