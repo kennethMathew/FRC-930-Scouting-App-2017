@@ -47,8 +47,6 @@ public class AutonMenu extends AppCompatActivity {
         gearGroupAuton = (RadioGroup) findViewById(R.id.gearGroupAuton);
         gearRadioButton = (RadioButton) findViewById(R.id.notScoredGearsAuton);
 
-        shooterAccuracy = (EditText) findViewById(R.id.shooterAccuracy);
-
         numBallAccuracy = (TextView) findViewById(R.id.numBallsAuton);
 
         goToAuton2.setOnClickListener(
@@ -56,17 +54,9 @@ public class AutonMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        ballStatus = ballGroupAuton.getCheckedRadioButtonId();
-                        ballRadioButton = (RadioButton)findViewById(ballStatus);
-                        ballStatusAuton  = ballGroupAuton.toString();
-
-                        gearStatus = gearGroupAuton.getCheckedRadioButtonId();
-                        gearRadioButton = (RadioButton)findViewById(gearStatus);
-                        gearStatusAuton  = gearGroupAuton.toString();
 
 
-                        String numOfBallsShot   = numBallsAuton.toString();
-                        String shootingAccuracy = shooterAccuracy.getText().toString();
+                        
 
                         Intent intent = new Intent (AutonMenu.this, AutonMenu2.class);
                         startActivity(intent);
@@ -103,7 +93,9 @@ public class AutonMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         numBallsAuton = numBallsAuton + 1;
+                        numBallAccuracy.setTextSize(20);
                         numBallAccuracy.setText(Integer.toString(numBallsAuton));
+
                     }
                 }
 
@@ -113,7 +105,9 @@ public class AutonMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         numBallsAuton = numBallsAuton - 1;
+                        numBallAccuracy.setTextSize(20);
                         numBallAccuracy.setText(Integer.toString(numBallsAuton));
+
                     }
                 }
 

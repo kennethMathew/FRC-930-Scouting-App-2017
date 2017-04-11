@@ -14,14 +14,15 @@
         android:layout_marginTop="16dp"
         android:text="Main Menu"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp" />
 
     <Button
         android:id="@+id/backPreMatchMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="-118dp"
+        android:layout_marginTop="-238dp"
         android:text="Back"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -73,4 +74,46 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1" />
+
+    <TextView
+        android:id="@+id/redAlliance"
+        android:layout_width="96dp"
+        android:layout_height="0dp"
+        android:text="RED"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="23dp"
+        app:layout_constraintBottom_toBottomOf="@+id/allianceSelector"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/allianceSelector"
+        app:layout_constraintLeft_toRightOf="@+id/allianceSelector" />
+
+    <TextView
+        android:id="@+id/blueAlliance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="BLUE"
+        app:layout_constraintRight_toLeftOf="@+id/allianceSelector"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="21dp"
+        app:layout_constraintBottom_toBottomOf="@+id/allianceSelector"
+        android:layout_marginEnd="20dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/backPreMatchMenu"
+        app:layout_constraintTop_toTopOf="@+id/allianceSelector" />
+
+    <Switch
+        android:id="@+id/allianceSelector"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="71dp"
+        app:layout_constraintTop_toBottomOf="@+id/matchNum" />
+
+
 </android.support.constraint.ConstraintLayout>
