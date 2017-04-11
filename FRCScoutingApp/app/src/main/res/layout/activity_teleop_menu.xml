@@ -102,61 +102,65 @@
         android:id="@+id/addGearsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_input_add"
-        tools:ignore="ContentDescription,MissingConstraints"
-        tools:layout_constraintTop_creator="1"
         android:layout_marginStart="23dp"
         android:layout_marginTop="11dp"
+        android:tint="@android:color/holo_blue_dark"
+        app:layout_constraintLeft_toLeftOf="@+id/submitGearsTime"
         app:layout_constraintTop_toBottomOf="@+id/submitGearsTime"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:ignore="ContentDescription,MissingConstraints"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/submitGearsTime" />
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/subtractGearsTeleop"
         android:layout_width="0dp"
         android:layout_height="53dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginTop="18dp"
+        android:tint="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/goToTeleop2"
+        app:layout_constraintLeft_toLeftOf="@+id/subtractBallsTeleop"
+        app:layout_constraintRight_toRightOf="@+id/subtractBallsTeleop"
+        app:layout_constraintTop_toBottomOf="@+id/gears"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
         tools:ignore="ContentDescription,MissingConstraints"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/goToTeleop2"
-        app:layout_constraintRight_toRightOf="@+id/subtractBallsTeleop"
-        android:layout_marginTop="18dp"
-        app:layout_constraintTop_toBottomOf="@+id/gears"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="23dp"
-        app:layout_constraintLeft_toLeftOf="@+id/subtractBallsTeleop" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/addBallsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:tint="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/addGearsTeleop"
+        app:layout_constraintLeft_toLeftOf="@+id/addGearsTeleop"
+        app:layout_constraintRight_toRightOf="@+id/addGearsTeleop"
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="ContentDescription,MissingConstraints"
-        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/addGearsTeleop"
-        app:layout_constraintRight_toRightOf="@+id/addGearsTeleop"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="78dp"
-        app:layout_constraintLeft_toLeftOf="@+id/addGearsTeleop" />
+        tools:layout_constraintRight_creator="1" />
 
     <ImageButton
         android:id="@+id/subtractBallsTeleop"
         android:layout_width="55dp"
         android:layout_height="53dp"
+        android:layout_marginBottom="77dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="31dp"
+        android:tint="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/subtractGearsTeleop"
+        app:layout_constraintLeft_toLeftOf="@+id/gears"
+        app:layout_constraintRight_toLeftOf="@+id/ballsTimer"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
         tools:ignore="ContentDescription,MissingConstraints"
-        app:layout_constraintRight_toLeftOf="@+id/ballsTimer"
-        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/subtractGearsTeleop"
-        android:layout_marginStart="31dp"
-        android:layout_marginEnd="17dp"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="77dp"
-        app:layout_constraintLeft_toLeftOf="@+id/gears" />
+        tools:layout_constraintRight_creator="1" />
 
     <RadioGroup
         android:id="@+id/ballGroupTeleop"
@@ -179,6 +183,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="No Attempt"
+            app:buttonTint="@android:color/holo_blue_dark"
             tools:ignore="HardcodedText" />
 
         <RadioButton
@@ -187,6 +192,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Low"
+            app:buttonTint="@android:color/holo_blue_dark"
             tools:ignore="HardcodedText" />
 
         <RadioButton
@@ -195,6 +201,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="High"
+            app:buttonTint="@android:color/holo_blue_dark"
             tools:ignore="HardcodedText" />
     </RadioGroup>
 
@@ -230,19 +237,19 @@
         android:id="@+id/gearsTimer"
         android:layout_width="106dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
         android:ems="10"
         android:hint="In Seconds"
         android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/addGearsTeleop"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:text="In Seconds"
+        app:layout_constraintTop_toTopOf="@+id/submitGearsTime"
         tools:ignore="HardcodedText,MissingConstraints"
-        tools:layout_constraintTop_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/addGearsTeleop"
-        android:layout_marginBottom="3dp"
-        app:layout_constraintTop_toTopOf="@+id/submitGearsTime" />
+        tools:layout_constraintTop_creator="1"
+        tools:text="In Seconds" />
 
     <EditText
         android:id="@+id/ballsTimer"

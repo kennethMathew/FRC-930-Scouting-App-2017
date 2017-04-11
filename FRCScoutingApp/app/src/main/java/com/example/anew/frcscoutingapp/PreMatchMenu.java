@@ -9,19 +9,21 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class PreMatchMenu extends AppCompatActivity {
     Button backPreMatchMenu, startScouting, mainMenu;
     Switch allianceSelector;
     TextView redAlliance, blueAlliance;
+    Integer greenAlliance;
+    View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pre_match_menu);
+        greenAlliance = 0;
+        view = this.getWindow().getDecorView();
+
         onClickListenerPreMatchMenu();
     }
 
@@ -34,6 +36,7 @@ public class PreMatchMenu extends AppCompatActivity {
         allianceSelector = (Switch)findViewById(R.id.allianceSelector);
         redAlliance = (TextView)findViewById(R.id.redAlliance);
         blueAlliance = (TextView)findViewById(R.id.blueAlliance);
+
 
         startScouting.setOnClickListener(
                 new View.OnClickListener() {
@@ -76,11 +79,31 @@ public class PreMatchMenu extends AppCompatActivity {
                     redAlliance.setBackgroundColor(Color.parseColor("#FF0000"));
                     redAlliance.setTextSize(25);
                     blueAlliance.setBackgroundColor(Color.parseColor("#ffffff"));
+                    allianceSelector.setBackgroundColor(Color.parseColor("#FF0000"));
+                    greenAlliance = greenAlliance + 1;
+                    if (greenAlliance >= 20){
+                        redAlliance.setBackgroundColor(Color.parseColor("#008000"));
+                        blueAlliance.setBackgroundColor(Color.parseColor("#008000"));
+                        view.setBackgroundColor(Color.parseColor("#008000"));
+                        allianceSelector.setBackgroundColor(Color.parseColor("#008000"));
+
+
+                       }
+
 
                 }else{
                     blueAlliance.setBackgroundColor(Color.parseColor("#0000ff"));
                     blueAlliance.setTextSize(25);
                     redAlliance.setBackgroundColor(Color.parseColor("#ffffff"));
+                    allianceSelector.setBackgroundColor(Color.parseColor("#0000ff"));
+                    greenAlliance = greenAlliance + 1;
+                    if (greenAlliance >= 20){
+                        redAlliance.setBackgroundColor(Color.parseColor("#008000"));
+                        blueAlliance.setBackgroundColor(Color.parseColor("#008000"));
+                        allianceSelector.setBackgroundColor(Color.parseColor("#008000"));
+                        view.setBackgroundColor(Color.parseColor("#008000"));
+
+                    }
                 }
             }
         });
