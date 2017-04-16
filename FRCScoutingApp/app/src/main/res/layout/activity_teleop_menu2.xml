@@ -33,18 +33,6 @@
         tools:layout_constraintRight_creator="1"
         app:layout_constraintHorizontal_bias="0.502" />
 
-    <Button
-        android:id="@+id/backTeleopMenu2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Back"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,RtlHardcoded" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -66,9 +54,15 @@
         android:layout_marginEnd="59dp"
         android:layout_marginRight="59dp"
         android:layout_marginTop="73dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:drawableTint="@android:color/holo_blue_dark"
         android:ems="10"
         android:hint="Climb Time"
         android:inputType="number"
+        android:shadowColor="@android:color/holo_blue_dark"
+        android:textColorHighlight="@android:color/holo_blue_dark"
+        android:textColorLink="@android:color/holo_blue_dark"
+        android:textCursorDrawable="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/numFoulsTeleop"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/mainMenu"
@@ -318,16 +312,15 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="85dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="87dp"
         android:text="Climb?"
-        android:thumbTint="@android:color/holo_blue_light"
-        android:trackTint="@android:color/holo_blue_dark"
+        android:thumbTint="@android:color/darker_gray"
+        android:trackTint="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintLeft_toRightOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/backTeleopMenu2"
         tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginLeft="28dp" />
 
 </android.support.constraint.ConstraintLayout>

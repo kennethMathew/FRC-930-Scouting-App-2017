@@ -10,19 +10,6 @@
 
 
     <Button
-        android:id="@+id/backAutonMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Back"
-        tools:ignore="HardcodedText,RtlHardcoded"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="16dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/mainMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -103,7 +90,6 @@
         android:tint="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/gearGroupAuton"
         app:layout_constraintLeft_toLeftOf="@+id/balls"
-        app:layout_constraintRight_toRightOf="@+id/backAutonMenu"
         app:layout_constraintTop_toTopOf="@+id/balls"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
         tools:layout_constraintBottom_creator="1"
@@ -191,7 +177,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Low"
-            app:buttonTint="@android:color/holo_green_dark" />
+            app:buttonTint="@android:color/holo_blue_dark" />
 
         <RadioButton
             android:id="@+id/highGoalAuton"

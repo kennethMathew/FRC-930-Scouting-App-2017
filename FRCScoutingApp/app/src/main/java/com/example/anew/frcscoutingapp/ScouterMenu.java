@@ -12,7 +12,7 @@ public class ScouterMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scouter_menu2);
+        setContentView(R.layout.activity_scouter_menu);
         onClickListenerScouterMenu();
 
     }
@@ -33,7 +33,7 @@ public class ScouterMenu extends AppCompatActivity {
                 }
 
         );
-       /* genQR.setOnClickListener(
+       genQR.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -56,6 +56,5 @@ public class ScouterMenu extends AppCompatActivity {
 
         );
 
-*/
     }
 }
