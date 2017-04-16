@@ -1,5 +1,6 @@
 package com.example.anew.frcscoutingapp;
 
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class ScouterMenu extends AppCompatActivity {
-        Button startMatch, genQR, backScouterMenu;
+    Button startMatch, genQR, backScouterMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,7 @@ public class ScouterMenu extends AppCompatActivity {
                 }
 
         );
-        genQR.setOnClickListener(
+       /* genQR.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -55,7 +56,6 @@ public class ScouterMenu extends AppCompatActivity {
 
         );
 
-
+*/
     }
 }
-

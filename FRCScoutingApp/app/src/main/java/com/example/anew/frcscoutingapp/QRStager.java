@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class QRStager extends AppCompatActivity {
-        Button backQRStager, genQRCode, mainMenu;
+    Button backQRStager, genQRCode, mainMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -7,15 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
-
 public class PreMatchMenu extends AppCompatActivity {
     Button backPreMatchMenu, startScouting, mainMenu;
     Switch allianceSelector;
     TextView redAlliance, blueAlliance;
+    EditText teamNum, matchNum;
     Integer greenAlliance;
     View view;
+    String [] teamArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +25,8 @@ public class PreMatchMenu extends AppCompatActivity {
         setContentView(R.layout.activity_pre_match_menu);
         greenAlliance = 0;
         view = this.getWindow().getDecorView();
-
         onClickListenerPreMatchMenu();
+        teamArray = new String[30];
     }
 
     public void onClickListenerPreMatchMenu() {
@@ -37,11 +39,20 @@ public class PreMatchMenu extends AppCompatActivity {
         redAlliance = (TextView)findViewById(R.id.redAlliance);
         blueAlliance = (TextView)findViewById(R.id.blueAlliance);
 
+        teamNum = (EditText)findViewById(R.id.teamNum);
+        matchNum = (EditText)findViewById(R.id.matchNum);
 
         startScouting.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        String teamNumber = teamNum.getText().toString();
+                        String matchNumber = matchNum.getText().toString();
+                        if(allianceSelector.isChecked()){
+                            String alliance = "Red";
+                        } else {
+                            String alliance = "Blue";
+                        }
                         Intent intent = new Intent(PreMatchMenu.this, AutonMenu.class);
                         startActivity(intent);
 
@@ -84,11 +95,9 @@ public class PreMatchMenu extends AppCompatActivity {
                     if (greenAlliance >= 50){
                         redAlliance.setBackgroundColor(Color.parseColor("#008000"));
                         blueAlliance.setBackgroundColor(Color.parseColor("#008000"));
-                        view.setBackgroundColor(Color.parseColor("#008000"));
                         allianceSelector.setBackgroundColor(Color.parseColor("#008000"));
+                    }
 
-
-                       }
 
 
                 }else{
@@ -101,8 +110,6 @@ public class PreMatchMenu extends AppCompatActivity {
                         redAlliance.setBackgroundColor(Color.parseColor("#008000"));
                         blueAlliance.setBackgroundColor(Color.parseColor("#008000"));
                         allianceSelector.setBackgroundColor(Color.parseColor("#008000"));
-                        view.setBackgroundColor(Color.parseColor("#008000"));
-
                     }
                 }
             }

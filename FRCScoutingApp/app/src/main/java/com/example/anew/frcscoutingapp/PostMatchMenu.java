@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -14,9 +15,10 @@ import android.widget.TextView;
 import static com.example.anew.frcscoutingapp.R.id.redAlliance;
 
 public class PostMatchMenu extends AppCompatActivity {
-        Button backPostMatchMenu, submitMatchData, mainMenu;
-        TextView loss, win;
-        Switch winLoss;
+    Button backPostMatchMenu, submitMatchData, mainMenu;
+    TextView loss, win;
+    Switch winLoss;
+    EditText comments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class PostMatchMenu extends AppCompatActivity {
         winLoss = (Switch)findViewById(R.id.winLoss);
         loss = (TextView)findViewById(R.id.loss);
         win = (TextView)findViewById(R.id.win);
+        comments = (EditText)findViewById(R.id.comments);
 
 
 
@@ -40,18 +43,15 @@ public class PostMatchMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+                        if (winLoss.isChecked()) {
+                            String winOrLoss = "fo'shizzle,";
+                        } else {
+                            String winOrLoss = "no deal home zlice,";
+                        }
+                        String postMatchComments = comments.getText().toString();
+
                         Intent intent = new Intent(PostMatchMenu.this,ScouterMenu.class);
-                        startActivity(intent);
-
-                    }
-                }
-
-        );
-        backPostMatchMenu.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(PostMatchMenu.this, TeleopMenu.class);
                         startActivity(intent);
 
                     }

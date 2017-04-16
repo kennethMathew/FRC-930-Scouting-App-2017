@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MasterStager extends AppCompatActivity {
-        Button backMasterStager, storeData, mainMenu;
+    Button backMasterStager, storeData, mainMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

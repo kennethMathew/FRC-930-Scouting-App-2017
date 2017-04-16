@@ -9,7 +9,7 @@ import android.widget.Button;
 
 
 public class QRDeployer extends AppCompatActivity {
-        Button backQRDeployer, doneWithCode, mainMenu;
+    Button backQRDeployer, doneWithCode, mainMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

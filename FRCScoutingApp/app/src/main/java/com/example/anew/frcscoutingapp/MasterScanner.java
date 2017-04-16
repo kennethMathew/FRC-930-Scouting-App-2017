@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MasterScanner extends AppCompatActivity {
-        Button backMasterScanner, doneScanning, mainMenu;
+    Button backMasterScanner, doneScanning, mainMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

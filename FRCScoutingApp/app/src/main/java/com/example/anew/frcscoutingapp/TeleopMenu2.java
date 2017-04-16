@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ public class TeleopMenu2 extends AppCompatActivity {
     Integer foulsTeleop = 0, techFoulsTeleop = 0, humanErrors = 0, roboErrorsTeleop = 0;
     TextView numFoulsTeleop, numTechFoulsTeleop, numHumanErrorsTeleop, numRoboErrorsTeleop;
     Switch climbYesNo;
+    EditText climbTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +59,22 @@ public class TeleopMenu2 extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        String numFoulTeleop = Integer.toString(foulsTeleop);
+                        String numTechFoulTeleop = Integer.toString(techFoulsTeleop);
+                        String numHumanErrorTeleop = Integer.toString(humanErrors);
+                        String numRoboErrorTeleop = Integer.toString(roboErrorsTeleop);
+
+                        String tToClimb = climbTime.getText().toString();
+
+                        if (climbYesNo.isChecked()) {
+                            String climbedYesNo = "fo'shizzle,";
+                        } else {
+                            String climbedYesNo = "no deal home zlice,";
+                        }
+
+
+
+
                         Intent intent = new Intent(TeleopMenu2.this,PostMatchMenu.class);
                         startActivity(intent);
 
@@ -64,17 +82,7 @@ public class TeleopMenu2 extends AppCompatActivity {
                 }
 
         );
-        backTeleopMenu2.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(TeleopMenu2.this, AutonMenu.class);
-                        startActivity(intent);
 
-                    }
-                }
-
-        );
         mainMenu.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

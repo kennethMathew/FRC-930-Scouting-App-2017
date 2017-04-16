@@ -1,6 +1,7 @@
 package com.example.anew.frcscoutingapp;
 
 import android.content.Intent;
+import android.support.annotation.MainThread;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,30 +11,42 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import java.lang.reflect.Array;
+import java.util.Timer;
+
 public class TeleopMenu extends AppCompatActivity {
-    Button backTeleop2Menu, goToTeleop2, mainMenu, submitBallsTime, submitGearsTime;
+    Button backTeleopMenu, goToTeleop2, mainMenu, submitBallsTime, submitGearsTime;
     ImageButton subtractBallsTeleop, addBallsTeleop, subtractGearsTeleop, addGearsTeleop;
-    Integer ballsTeleop = 0, gearsTeleop = 0, gearTimesIndexer, ballTimesIndexer, ballStatus;
+    Integer ballsTeleop, gearsTeleop, gearTimesIndexer, ballTimesIndexer, ballStatus, indexStandard, gearTime, ballTime, avgGearTime, avgBallTime;
     TextView numBallsTeleop, numGearsTeleop;
     EditText ballCycleTime, gearCycleTime;
     RadioButton ballRadioButtonTeleop;
     RadioGroup ballGroupTeleop;
-    String ballStatusAuton, numGearTeleop, numBallTeleop;
+    String ballStatusTeleop, numGearTeleop, numBallTeleop, ballTimes, gearTimes;
+    int [] ballCycleTimes, gearCycleTimes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teleop_menu);
         ballTimesIndexer = 0;
         gearTimesIndexer = 0;
+        ballsTeleop = 0;
+        gearsTeleop = 0;
+        ballCycleTimes = new int [10];
+        gearCycleTimes = new int [10];
+        ballTime = 0;
+        gearTime = 0;
+
         onClickListenerTeleopMenu();
 
 
     }
     public void onClickListenerTeleopMenu() {
 
-        backTeleop2Menu = (Button) findViewById(R.id.backTeleopMenu);
+        backTeleopMenu = (Button) findViewById(R.id.backTeleopMenu);
         goToTeleop2 = (Button) findViewById(R.id.goToTeleop2);
         mainMenu = (Button) findViewById(R.id.mainMenu);
 
@@ -61,25 +74,38 @@ public class TeleopMenu extends AppCompatActivity {
                     public void onClick(View v) {
                         ballStatus = ballGroupTeleop.getCheckedRadioButtonId();
                         ballRadioButtonTeleop = (RadioButton)findViewById(ballStatus);
-                        ballStatusAuton  = ballGroupTeleop.toString();
+                        ballStatusTeleop  = ballGroupTeleop.toString();
 
                         numBallTeleop = Integer.toString(ballsTeleop);
                         numGearTeleop = Integer.toString(gearsTeleop);
 
+                        indexStandard = gearCycleTimes.length;
+                        if(indexStandard != 0) {
+                            for (int i = 0; i <= indexStandard - 1; i++) {
+                                gearTime = (gearCycleTimes[i]) + gearTime;
+
+                            }
+                            avgGearTime = gearTime / indexStandard;
+                            String numOfCyclesGears = Integer.toString(indexStandard);
+                            String avgGearTimes = Integer.toString(avgGearTime);
+                        }
+
+
+
+                        indexStandard = ballCycleTimes.length;
+                        if(indexStandard != 0){
+                            for (int i = 0; i <= indexStandard - 1; i++) {
+                                ballTime = (ballCycleTimes[i]) + ballTime;
+
+                            }
+                            avgBallTime = ballTime / indexStandard;
+                            String numOfCyclesBalls = Integer.toString(indexStandard);
+                            String avgBallTimes = Integer.toString(avgBallTime);
+
+                        }
                         Intent intent = new Intent(TeleopMenu.this, TeleopMenu2.class);
                         startActivity(intent);
 
-
-                    }
-                }
-
-        );
-        backTeleop2Menu.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(TeleopMenu.this, AutonMenu.class);
-                        startActivity(intent);
 
                     }
                 }
@@ -143,10 +169,14 @@ public class TeleopMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String []  ballCycleTimes = new String [10];
-                        ballCycleTimes [ballTimesIndexer] = ballCycleTime.getText().toString();
-                        ballTimesIndexer = ballTimesIndexer + 1;
-                        ballCycleTime.setText("");
+                        if (Integer.parseInt(ballCycleTime.getText().toString()) == 0) {
+
+                        } else {
+                            ballCycleTimes[ballTimesIndexer] = Integer.parseInt(ballCycleTime.getText().toString());
+                            ballTimesIndexer = ballTimesIndexer + 1;
+                            ballCycleTime.setText("0");
+
+                        }
                     }
                 }
 
@@ -155,13 +185,15 @@ public class TeleopMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String []  gearCycleTimes = new String [10];
-                        gearCycleTimes [gearTimesIndexer] = ballCycleTime.getText().toString();
-                        gearTimesIndexer = gearTimesIndexer + 1;
-                        gearCycleTime.setText("");
+                        if (Integer.parseInt(gearCycleTime.getText().toString()) == 0) {
+
+                        } else {
+                            gearCycleTimes[gearTimesIndexer] = Integer.parseInt(gearCycleTime.getText().toString());
+                            gearTimesIndexer = gearTimesIndexer + 1;
+                            gearCycleTime.setText("0");
+                        }
                     }
                 }
-
         );
     }
 }

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MasterMenu extends AppCompatActivity {
-        Button backMasterMenu, scanCode, viewDatabase;
+    Button backMasterMenu, scanCode, viewDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

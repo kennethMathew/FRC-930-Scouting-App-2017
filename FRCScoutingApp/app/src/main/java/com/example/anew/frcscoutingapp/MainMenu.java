@@ -23,7 +23,7 @@ public class MainMenu extends AppCompatActivity {
         master = (Button)findViewById(R.id.master);
         settings = (Button)findViewById(R.id.settings);
 
-            scouter.setOnClickListener(
+        scouter.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -34,7 +34,7 @@ public class MainMenu extends AppCompatActivity {
                 }
 
         );
-            master.setOnClickListener(
+           /* master.setOnClickListener(
                     new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -57,7 +57,7 @@ public class MainMenu extends AppCompatActivity {
 
             );
 
-
+*/
     }
 }
 

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class SettingsMenu extends AppCompatActivity {
-        Button backSettingsMenu;
+    Button backSettingsMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

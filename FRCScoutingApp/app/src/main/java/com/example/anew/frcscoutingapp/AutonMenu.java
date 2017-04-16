@@ -18,7 +18,7 @@ public class AutonMenu extends AppCompatActivity {
     Button backAutonMenu, goToAuton2, mainMenuAuton;
     ImageButton addBallsAuton, subtractBallsAuton;
     Integer numBallsAuton, gearStatus, ballStatus;
-    RadioButton ballRadioButton, gearRadioButton;
+    RadioButton ballRadioButtonAuton, gearRadioButtonAuton;
     RadioGroup ballGroupAuton, gearGroupAuton;
     TextView numBallAccuracy;
     EditText shooterAccuracy;
@@ -42,10 +42,10 @@ public class AutonMenu extends AppCompatActivity {
         subtractBallsAuton = (ImageButton) findViewById(R.id.subtractBallsAuton);
 
         ballGroupAuton = (RadioGroup) findViewById(R.id.ballGroupAuton);
-        ballRadioButton = (RadioButton) findViewById(R.id.lowGoalAuton);
+        ballRadioButtonAuton = (RadioButton) findViewById(R.id.lowGoalAuton);
 
         gearGroupAuton = (RadioGroup) findViewById(R.id.gearGroupAuton);
-        gearRadioButton = (RadioButton) findViewById(R.id.notScoredGearsAuton);
+        gearRadioButtonAuton = (RadioButton) findViewById(R.id.notScoredGearsAuton);
 
         numBallAccuracy = (TextView) findViewById(R.id.numBallsAuton);
 
@@ -53,25 +53,19 @@ public class AutonMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        ballStatus = ballGroupAuton.getCheckedRadioButtonId();
+                        ballRadioButtonAuton = (RadioButton)findViewById(ballStatus);
+                        ballStatusAuton  = ballGroupAuton.toString();
 
+                        gearStatus = gearGroupAuton.getCheckedRadioButtonId();
+                        gearRadioButtonAuton = (RadioButton)findViewById(gearStatus);
+                        gearStatusAuton  = gearGroupAuton.toString();
 
-
-
+                        String numOfBalls = Integer.toString(numBallsAuton);
 
                         Intent intent = new Intent (AutonMenu.this, AutonMenu2.class);
                         startActivity(intent);
 
-
-                    }
-                }
-
-        );
-        backAutonMenu.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(AutonMenu.this, PreMatchMenu.class);
-                        startActivity(intent);
 
                     }
                 }
