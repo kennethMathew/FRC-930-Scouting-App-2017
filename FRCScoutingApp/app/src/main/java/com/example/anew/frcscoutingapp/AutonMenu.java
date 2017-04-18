@@ -34,7 +34,7 @@ public class AutonMenu extends AppCompatActivity {
     }
     public void autonMenu() {
 
-        backAutonMenu = (Button) findViewById(R.id.backAutonMenu);
+
         goToAuton2 = (Button) findViewById(R.id.goToAuton2);
         mainMenuAuton = (Button) findViewById(R.id.mainMenu);
 

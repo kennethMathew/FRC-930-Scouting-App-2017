@@ -27,7 +27,6 @@ public class AutonMenu2 extends AppCompatActivity {
     }
     public void AutonMenu2Run() {
 
-        backAutonMenu2 = (Button) findViewById(R.id.backAutonMenu2);
         goToTeleop = (Button) findViewById(R.id.goToTeleop);
         mainMenuAuton2 = (Button) findViewById(R.id.mainMenuAuton2);
 

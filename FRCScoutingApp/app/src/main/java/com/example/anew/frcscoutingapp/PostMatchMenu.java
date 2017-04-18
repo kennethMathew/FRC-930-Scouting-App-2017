@@ -28,7 +28,6 @@ public class PostMatchMenu extends AppCompatActivity {
     }
     public void onClickListenerPostMatchMenu() {
 
-        backPostMatchMenu = (Button) findViewById(R.id.backPostMatchMenu);
         submitMatchData = (Button) findViewById(R.id.submitMatchData);
         mainMenu = (Button) findViewById(R.id.mainMenu);
 

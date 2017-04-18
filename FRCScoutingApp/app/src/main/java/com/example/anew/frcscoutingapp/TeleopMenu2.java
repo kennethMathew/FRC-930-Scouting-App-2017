@@ -31,7 +31,6 @@ public class TeleopMenu2 extends AppCompatActivity {
     }
     public void onClickListenerTeleopMenu2() {
 
-        backTeleopMenu2 = (Button) findViewById(R.id.backTeleopMenu2);
         goToPostMatch = (Button) findViewById(R.id.goToPostMatch);
         mainMenu = (Button) findViewById(R.id.mainMenu);
 
