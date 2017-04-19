@@ -10,6 +10,9 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+
 public class PreMatchMenu extends AppCompatActivity {
     Button backPreMatchMenu, startScouting, mainMenu;
     Switch allianceSelector;
@@ -17,7 +20,8 @@ public class PreMatchMenu extends AppCompatActivity {
     EditText teamNum, matchNum;
     Integer greenAlliance;
     View view;
-    String [] teamArray;
+    String arrayName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +30,7 @@ public class PreMatchMenu extends AppCompatActivity {
         greenAlliance = 0;
         view = this.getWindow().getDecorView();
         onClickListenerPreMatchMenu();
-        teamArray = new String[30];
+
     }
 
     public void onClickListenerPreMatchMenu() {
@@ -48,6 +52,11 @@ public class PreMatchMenu extends AppCompatActivity {
                     public void onClick(View v) {
                         String teamNumber = teamNum.getText().toString();
                         String matchNumber = matchNum.getText().toString();
+                        arrayName = teamNumber + "~~~" + matchNumber;
+
+                        ArrayList<String> teamArray = new ArrayList<>();
+
+
                         if(allianceSelector.isChecked()){
                             String alliance = "Red";
                         } else {
