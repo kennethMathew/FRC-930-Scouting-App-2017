@@ -21,11 +21,16 @@ public class TeleopMenu2 extends AppCompatActivity {
     TextView numFoulsTeleop, numTechFoulsTeleop, numHumanErrorsTeleop, numRoboErrorsTeleop;
     Switch climbYesNo;
     EditText climbTime;
+    Intent teleop2Array;
+    String [] teamArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teleop_menu2);
+        teleop2Array = getIntent();
+        teamArray = teleop2Array.getStringArrayExtra("TeleopArray");
         onClickListenerTeleopMenu2();
+
 
 
     }
@@ -74,8 +79,9 @@ public class TeleopMenu2 extends AppCompatActivity {
 
 
 
-                        Intent intent = new Intent(TeleopMenu2.this,PostMatchMenu.class);
-                        startActivity(intent);
+                        Intent startActivityTeleop2Menu = new Intent(TeleopMenu2.this, TeleopMenu2.class);
+                        startActivityTeleop2Menu.putExtra("Teleop2Array", teamArray);
+                        startActivity(startActivityTeleop2Menu);
 
                     }
                 }

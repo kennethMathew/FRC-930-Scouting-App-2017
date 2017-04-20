@@ -12,6 +12,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class AutonMenu extends AppCompatActivity {
 
 
@@ -23,12 +25,22 @@ public class AutonMenu extends AppCompatActivity {
     TextView numBallAccuracy;
     EditText shooterAccuracy;
     String ballStatusAuton, gearStatusAuton;
+    String [] teamArrayAuton;
+    Intent preMatchArray, startActivityAutonMenu;
+
+    public Integer addOne(int baseValue){
+        baseValue = baseValue + 1;
+        return baseValue;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auton_menu);
         numBallsAuton = 0;
+        preMatchArray = getIntent();
+        teamArrayAuton = preMatchArray.getStringArrayExtra("PreMatchArray");
+
         autonMenu();
 
     }
@@ -55,16 +67,20 @@ public class AutonMenu extends AppCompatActivity {
                     public void onClick(View v) {
                         ballStatus = ballGroupAuton.getCheckedRadioButtonId();
                         ballRadioButtonAuton = (RadioButton)findViewById(ballStatus);
-                        ballStatusAuton  = ballGroupAuton.toString();
+
+                        teamArrayAuton [3] = ballGroupAuton.toString();
+
 
                         gearStatus = gearGroupAuton.getCheckedRadioButtonId();
                         gearRadioButtonAuton = (RadioButton)findViewById(gearStatus);
-                        gearStatusAuton  = gearGroupAuton.toString();
 
-                        String numOfBalls = Integer.toString(numBallsAuton);
+                        teamArrayAuton [4] = gearGroupAuton.toString();
 
-                        Intent intent = new Intent (AutonMenu.this, AutonMenu2.class);
-                        startActivity(intent);
+                        teamArrayAuton [5] =  Integer.toString(numBallsAuton);
+
+                        startActivityAutonMenu = new Intent(AutonMenu.this, AutonMenu2.class);
+                        startActivityAutonMenu.putExtra("AutonArray", teamArrayAuton);
+                        startActivity(startActivityAutonMenu);
 
 
                     }

@@ -7,13 +7,17 @@ import android.widget.Button;
 import android.view.View;
 import android.content.Intent;
 
+import java.util.ArrayList;
+
 public class MainMenu extends AppCompatActivity {
     Button scouter, master, settings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         onClickListenerMainMenu();
+
 
     }
 

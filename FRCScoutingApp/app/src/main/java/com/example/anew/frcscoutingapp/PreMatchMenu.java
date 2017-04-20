@@ -18,9 +18,15 @@ public class PreMatchMenu extends AppCompatActivity {
     Switch allianceSelector;
     TextView redAlliance, blueAlliance;
     EditText teamNum, matchNum;
-    Integer greenAlliance;
+    Integer greenAlliance, arrayIndexer;
     View view;
-    String arrayName;
+    String [] teamArray;
+
+    public Integer addOne(int baseValue){
+        baseValue = baseValue + 1;
+        return baseValue;
+
+    }
 
 
     @Override
@@ -30,7 +36,7 @@ public class PreMatchMenu extends AppCompatActivity {
         greenAlliance = 0;
         view = this.getWindow().getDecorView();
         onClickListenerPreMatchMenu();
-
+        teamArray = new String[40];
     }
 
     public void onClickListenerPreMatchMenu() {
@@ -50,20 +56,22 @@ public class PreMatchMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String teamNumber = teamNum.getText().toString();
-                        String matchNumber = matchNum.getText().toString();
-                        arrayName = teamNumber + "~~~" + matchNumber;
+                        teamArray [0] = teamNum.getText().toString();
 
-                        ArrayList<String> teamArray = new ArrayList<>();
 
+                        teamArray [1] = matchNum.getText().toString();
 
                         if(allianceSelector.isChecked()){
-                            String alliance = "Red";
+                            teamArray [2] = "Red";
+
                         } else {
-                            String alliance = "Blue";
+                            teamArray [2] = "Blue";
+
                         }
-                        Intent intent = new Intent(PreMatchMenu.this, AutonMenu.class);
-                        startActivity(intent);
+                        Intent startActivityPreMatchMenu = new Intent(PreMatchMenu.this, AutonMenu.class);
+                        //startActivityPreMatchMenu.putExtra("PreMatchArray", teamArray);
+                        startActivity(startActivityPreMatchMenu);
+
 
                     }
                 }
@@ -100,7 +108,7 @@ public class PreMatchMenu extends AppCompatActivity {
                     redAlliance.setTextSize(25);
                     blueAlliance.setBackgroundColor(Color.parseColor("#ffffff"));
                     allianceSelector.setBackgroundColor(Color.parseColor("#FF0000"));
-                    greenAlliance = greenAlliance + 1;
+                    greenAlliance = addOne(greenAlliance);
                     if (greenAlliance >= 50){
                         redAlliance.setBackgroundColor(Color.parseColor("#008000"));
                         blueAlliance.setBackgroundColor(Color.parseColor("#008000"));
@@ -114,7 +122,7 @@ public class PreMatchMenu extends AppCompatActivity {
                     blueAlliance.setTextSize(25);
                     redAlliance.setBackgroundColor(Color.parseColor("#ffffff"));
                     allianceSelector.setBackgroundColor(Color.parseColor("#0000ff"));
-                    greenAlliance = greenAlliance + 1;
+                    greenAlliance = addOne(greenAlliance);
                     if (greenAlliance >= 50){
                         redAlliance.setBackgroundColor(Color.parseColor("#008000"));
                         blueAlliance.setBackgroundColor(Color.parseColor("#008000"));

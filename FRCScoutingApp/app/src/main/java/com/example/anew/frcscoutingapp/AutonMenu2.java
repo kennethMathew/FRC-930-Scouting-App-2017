@@ -14,8 +14,16 @@ public class AutonMenu2 extends AppCompatActivity {
     Button backAutonMenu2, goToTeleop, mainMenuAuton2;
     CheckBox crossBaseline;
     ImageButton subtractFoulsAuton, addFoulsAuton, subtractTechFoulsAuton, addTechFoulsAuton, subtractRoboErrorsAuton, addRoboErrorsAuton;
-    Integer numFouls, numTechFouls, numRoboErrors;
+    Integer numFouls, numTechFouls, numRoboErrors, arrayIndexer;
     TextView numFoulsAuton, numTechFoulsAuton, numRoboErrorsAuton;
+    Intent preMatchArray, startActivityAutonMenu2;
+    String [] teamArray;
+
+    public Integer addOne(int baseValue){
+        baseValue = baseValue + 1;
+        return baseValue;
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +31,11 @@ public class AutonMenu2 extends AppCompatActivity {
         numFouls = 0;
         numTechFouls = 0;
         numRoboErrors = 0;
+        arrayIndexer = 6;
+        preMatchArray = getIntent();
+        teamArray = preMatchArray.getStringArrayExtra("AutonArray");
         AutonMenu2Run();
+
     }
     public void AutonMenu2Run() {
 
@@ -50,18 +62,26 @@ public class AutonMenu2 extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String numfoulAuton = numFoulsAuton.toString() + ",";
-                        String numTechFoulAuton = numTechFoulsAuton.toString() + ",";
-                        String numRoboErrorAuton = numRoboErrorsAuton.toString() + ",";
+                        teamArray [arrayIndexer] = numFoulsAuton.toString() + ",";
+                        arrayIndexer = addOne(arrayIndexer);
+
+                        teamArray [arrayIndexer] = numTechFoulsAuton.toString() + ",";
+                        arrayIndexer = addOne(arrayIndexer);
+
+                        teamArray [arrayIndexer] = numRoboErrorsAuton.toString() + ",";
+                        arrayIndexer = addOne(arrayIndexer);
 
                         if (crossBaseline.isChecked()) {
-                            String crossedBaseline = "fo'shizzle,";
+                            teamArray [arrayIndexer] = "fo'shizzle,";
+                            arrayIndexer = addOne(arrayIndexer);
                         } else {
-                            String crossedBaseline = "no deal home zlice,";
+                            teamArray [arrayIndexer] =  "no deal home zlice,";
+                            arrayIndexer = addOne(arrayIndexer);
                         }
 
-                        Intent intent = new Intent (AutonMenu2.this,TeleopMenu.class);
-                        startActivity(intent);
+                        startActivityAutonMenu2 = new Intent(AutonMenu2.this, TeleopMenu.class);
+                        startActivityAutonMenu2.putExtra("Auton2Array", teamArray);
+                        startActivity(startActivityAutonMenu2);
 
                     }
                 }
