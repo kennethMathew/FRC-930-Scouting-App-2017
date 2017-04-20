@@ -11,12 +11,12 @@ import android.widget.TextView;
 
 
 public class AutonMenu2 extends AppCompatActivity {
-    Button backAutonMenu2, goToTeleop, mainMenuAuton2;
+    Button backAutonMenu2, goToTeleop;
     CheckBox crossBaseline;
     ImageButton subtractFoulsAuton, addFoulsAuton, subtractTechFoulsAuton, addTechFoulsAuton, subtractRoboErrorsAuton, addRoboErrorsAuton;
-    Integer numFouls, numTechFouls, numRoboErrors, arrayIndexer;
+    Integer numFouls, numTechFouls, numRoboErrors;
     TextView numFoulsAuton, numTechFoulsAuton, numRoboErrorsAuton;
-    Intent preMatchArray, startActivityAutonMenu2;
+    Intent auton2Array, startActivityAutonMenu2;
     String [] teamArray;
 
     public Integer addOne(int baseValue){
@@ -24,6 +24,7 @@ public class AutonMenu2 extends AppCompatActivity {
         return baseValue;
 
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,16 +32,14 @@ public class AutonMenu2 extends AppCompatActivity {
         numFouls = 0;
         numTechFouls = 0;
         numRoboErrors = 0;
-        arrayIndexer = 6;
-        preMatchArray = getIntent();
-        teamArray = preMatchArray.getStringArrayExtra("AutonArray");
-        AutonMenu2Run();
+        auton2Array = getIntent();
+        teamArray = auton2Array.getStringArrayExtra("AutonArray");
+        autonMenu2Run();
 
     }
-    public void AutonMenu2Run() {
+    public void autonMenu2Run() {
 
         goToTeleop = (Button) findViewById(R.id.goToTeleop);
-        mainMenuAuton2 = (Button) findViewById(R.id.mainMenuAuton2);
 
         subtractFoulsAuton = (ImageButton) findViewById(R.id.subtractFoulsAuton);
         addFoulsAuton = (ImageButton) findViewById(R.id.addFoulsAuton);
@@ -62,21 +61,21 @@ public class AutonMenu2 extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        teamArray [arrayIndexer] = numFoulsAuton.toString() + ",";
-                        arrayIndexer = addOne(arrayIndexer);
+                        teamArray [6] = numFoulsAuton.toString() + ",";
 
-                        teamArray [arrayIndexer] = numTechFoulsAuton.toString() + ",";
-                        arrayIndexer = addOne(arrayIndexer);
 
-                        teamArray [arrayIndexer] = numRoboErrorsAuton.toString() + ",";
-                        arrayIndexer = addOne(arrayIndexer);
+                        teamArray [7] = numTechFoulsAuton.toString() + ",";
+
+
+                        teamArray [8] = numRoboErrorsAuton.toString() + ",";
+
 
                         if (crossBaseline.isChecked()) {
-                            teamArray [arrayIndexer] = "fo'shizzle,";
-                            arrayIndexer = addOne(arrayIndexer);
+                            teamArray [9] = "fo'shizzle,";
+
                         } else {
-                            teamArray [arrayIndexer] =  "no deal home zlice,";
-                            arrayIndexer = addOne(arrayIndexer);
+                            teamArray [10] =  "no deal home zlice,";
+
                         }
 
                         startActivityAutonMenu2 = new Intent(AutonMenu2.this, TeleopMenu.class);
@@ -98,17 +97,6 @@ public class AutonMenu2 extends AppCompatActivity {
                         Intent intent = new Intent(AutonMenu2.this, AutonMenu.class);
                         startActivity(intent);
 
-
-                    }
-                }
-
-        );
-        mainMenuAuton2.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(AutonMenu2.this, MainMenu.class);
-                        startActivity(intent);
 
                     }
                 }

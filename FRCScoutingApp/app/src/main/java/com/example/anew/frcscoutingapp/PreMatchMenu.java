@@ -18,7 +18,7 @@ public class PreMatchMenu extends AppCompatActivity {
     Switch allianceSelector;
     TextView redAlliance, blueAlliance;
     EditText teamNum, matchNum;
-    Integer greenAlliance, arrayIndexer;
+    Integer greenAlliance;
     View view;
     String [] teamArray;
 
@@ -35,11 +35,11 @@ public class PreMatchMenu extends AppCompatActivity {
         setContentView(R.layout.activity_pre_match_menu);
         greenAlliance = 0;
         view = this.getWindow().getDecorView();
-        onClickListenerPreMatchMenu();
-        teamArray = new String[40];
+        teamArray = new String[26];
+        preMatchMenuRun();
     }
 
-    public void onClickListenerPreMatchMenu() {
+    public void preMatchMenuRun() {
 
         backPreMatchMenu = (Button) findViewById(R.id.backPreMatchMenu);
         startScouting = (Button) findViewById(R.id.startScouting);
@@ -69,7 +69,7 @@ public class PreMatchMenu extends AppCompatActivity {
 
                         }
                         Intent startActivityPreMatchMenu = new Intent(PreMatchMenu.this, AutonMenu.class);
-                        //startActivityPreMatchMenu.putExtra("PreMatchArray", teamArray);
+                        startActivityPreMatchMenu.putExtra("PreMatchArray", teamArray);
                         startActivity(startActivityPreMatchMenu);
 
 

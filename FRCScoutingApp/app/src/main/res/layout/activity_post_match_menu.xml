@@ -77,19 +77,21 @@
 
     <EditText
         android:id="@+id/comments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="211dp"
+        android:layout_width="221dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="212dp"
         android:layout_marginStart="62dp"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:drawableTint="@android:color/holo_blue_dark"
         android:ems="10"
-        android:hint="Comments"
+        android:hint="Comments (NO COMMAS)"
         android:inputType="textPersonName"
         android:textCursorDrawable="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1" />
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginLeft="85dp"
+        tools:layout_editor_absoluteY="253dp" />
 
 </android.support.constraint.ConstraintLayout>

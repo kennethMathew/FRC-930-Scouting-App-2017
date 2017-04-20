@@ -18,14 +18,13 @@ import java.lang.reflect.Array;
 import java.util.Timer;
 
 public class TeleopMenu extends AppCompatActivity {
-    Button backTeleopMenu, goToTeleop2, mainMenu, submitBallsTime, submitGearsTime;
+    Button goToTeleop2, submitBallsTime, submitGearsTime;
     ImageButton subtractBallsTeleop, addBallsTeleop, subtractGearsTeleop, addGearsTeleop;
-    Integer ballsTeleop, gearsTeleop, gearTimesIndexer, ballTimesIndexer, ballStatus, indexStandard, gearTime, ballTime, avgGearTime, avgBallTime, arrayIndexer;
+    Integer ballsTeleop, gearsTeleop, gearTimesIndexer, ballTimesIndexer, ballStatus, indexStandard, gearTime, ballTime, avgGearTime, avgBallTime;
     TextView numBallsTeleop, numGearsTeleop;
     EditText ballCycleTime, gearCycleTime;
     RadioButton ballRadioButtonTeleop;
     RadioGroup ballGroupTeleop;
-    String ballStatusTeleop, numGearTeleop, numBallTeleop;
     int [] ballCycleTimes, gearCycleTimes;
     Intent teleopArray;
     String [] teamArray;
@@ -48,7 +47,6 @@ public class TeleopMenu extends AppCompatActivity {
         gearCycleTimes = new int [10];
         ballTime = 0;
         gearTime = 0;
-        arrayIndexer = 10;
         teleopArray = getIntent();
         teamArray = teleopArray.getStringArrayExtra("Auton2Array");
         TeleopMenu();
@@ -58,7 +56,6 @@ public class TeleopMenu extends AppCompatActivity {
     public void TeleopMenu() {
 
         goToTeleop2 = (Button) findViewById(R.id.goToTeleop2);
-        mainMenu = (Button) findViewById(R.id.mainMenu);
 
         subtractBallsTeleop = (ImageButton) findViewById(R.id.subtractBallsTeleop);
         addBallsTeleop = (ImageButton) findViewById(R.id.addBallsTeleop);
@@ -84,29 +81,28 @@ public class TeleopMenu extends AppCompatActivity {
                     public void onClick(View v) {
                         ballStatus = ballGroupTeleop.getCheckedRadioButtonId();
                         ballRadioButtonTeleop = (RadioButton)findViewById(ballStatus);
-                        teamArray [arrayIndexer] = ballGroupTeleop.toString();
-                        arrayIndexer = addOne(arrayIndexer);
+                        teamArray [11] = ballGroupTeleop.toString();
 
-                        teamArray [arrayIndexer] = Integer.toString(ballsTeleop);
-                        arrayIndexer = addOne(arrayIndexer);
 
-                        teamArray [arrayIndexer] = Integer.toString(gearsTeleop);
-                        arrayIndexer = addOne(arrayIndexer);
+                        teamArray [12] = Integer.toString(ballsTeleop);
+
+
+                        teamArray [13] = Integer.toString(gearsTeleop);
+
 
 
                         indexStandard = ballCycleTimes.length;
-                        if(indexStandard != 0){
+                        if(indexStandard != 0) {
                             for (int i = 0; i <= indexStandard - 1; i++) {
                                 ballTime = (ballCycleTimes[i]) + ballTime;
 
                             }
                             avgBallTime = ballTime / indexStandard;
 
-                            teamArray [arrayIndexer] = Integer.toString(indexStandard);
-                            arrayIndexer = addOne(arrayIndexer);
+                            teamArray[14] = Integer.toString(indexStandard);
 
-                            teamArray [arrayIndexer] = Integer.toString(avgBallTime);
-                            arrayIndexer = addOne(arrayIndexer);
+
+                            teamArray[15] = Integer.toString(avgBallTime);
                         }
 
                         indexStandard = gearCycleTimes.length;
@@ -117,12 +113,11 @@ public class TeleopMenu extends AppCompatActivity {
                             }
                             avgGearTime = gearTime / indexStandard;
 
-                            teamArray [arrayIndexer] = Integer.toString(indexStandard);
-                            arrayIndexer = addOne(arrayIndexer);
+                            teamArray [16] = Integer.toString(indexStandard);
 
-                            teamArray [arrayIndexer] = Integer.toString(avgGearTime);
-                            arrayIndexer = addOne(arrayIndexer);
-                        }
+
+                            teamArray [17] = Integer.toString(avgGearTime);
+                           }
 
                         Intent startActivityTeleopMenu = new Intent(TeleopMenu.this, TeleopMenu2.class);
                         startActivityTeleopMenu.putExtra("TeleopArray", teamArray);
@@ -133,19 +128,6 @@ public class TeleopMenu extends AppCompatActivity {
                 }
 
         );
-        mainMenu.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(TeleopMenu.this, MainMenu.class);
-                        startActivity(intent);
-
-                    }
-                }
-
-        );
-
-
 
         subtractBallsTeleop.setOnClickListener(
                 new View.OnClickListener() {

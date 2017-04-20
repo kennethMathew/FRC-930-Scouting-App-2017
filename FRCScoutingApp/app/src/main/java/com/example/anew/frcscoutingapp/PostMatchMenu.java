@@ -15,25 +15,30 @@ import android.widget.TextView;
 import static com.example.anew.frcscoutingapp.R.id.redAlliance;
 
 public class PostMatchMenu extends AppCompatActivity {
-    Button backPostMatchMenu, submitMatchData, mainMenu;
+    Button submitMatchData;
     TextView loss, win;
     Switch winLoss;
     EditText comments;
+    Intent postMatchArray;
+    String [] teamArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_match_menu);
-        onClickListenerPostMatchMenu();
+        postMatchArray = getIntent();
+        teamArray = postMatchArray.getStringArrayExtra("Teleop2Array");
+        postMatchMenu();
     }
-    public void onClickListenerPostMatchMenu() {
+    public void postMatchMenu() {
 
         submitMatchData = (Button) findViewById(R.id.submitMatchData);
-        mainMenu = (Button) findViewById(R.id.mainMenu);
 
         winLoss = (Switch)findViewById(R.id.winLoss);
+
         loss = (TextView)findViewById(R.id.loss);
         win = (TextView)findViewById(R.id.win);
+
         comments = (EditText)findViewById(R.id.comments);
 
 
@@ -44,30 +49,21 @@ public class PostMatchMenu extends AppCompatActivity {
                     public void onClick(View v) {
 
                         if (winLoss.isChecked()) {
-                            String winOrLoss = "fo'shizzle,";
+                            teamArray [24]= "fo'shizzle,";
                         } else {
-                            String winOrLoss = "no deal home zlice,";
+                            teamArray [25] = "no deal home zlice,";
                         }
-                        String postMatchComments = comments.getText().toString();
+                        teamArray [26] = comments.getText().toString();
 
-                        Intent intent = new Intent(PostMatchMenu.this,ScouterMenu.class);
-                        startActivity(intent);
-
-                    }
-                }
-
-        );
-        mainMenu.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(PostMatchMenu.this, MainMenu.class);
-                        startActivity(intent);
+                        Intent startActivityTeleop2Menu = new Intent(PostMatchMenu.this, QRStager.class);
+                        startActivityTeleop2Menu.putExtra("Teleop2Array", teamArray);
+                        startActivity(startActivityTeleop2Menu);
 
                     }
                 }
 
         );
+
         winLoss.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

@@ -14,10 +14,9 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class TeleopMenu2 extends AppCompatActivity {
-    Button backTeleopMenu2, goToPostMatch, mainMenu;
+    Button goToPostMatch;
     ImageButton subtractFoulsTeleop, addFoulsTeleop, subtractTechFoulsTeleop, addTechFoulsTeleop, subtractHumanErrors, addHumanErrors, subtractRoboErrorsTeleop, addRoboErrorsTeleop;
-    ToggleButton rope;
-    Integer foulsTeleop = 0, techFoulsTeleop = 0, humanErrors = 0, roboErrorsTeleop = 0;
+    Integer foulsTeleop, techFoulsTeleop, humanErrors, roboErrorsTeleop;
     TextView numFoulsTeleop, numTechFoulsTeleop, numHumanErrorsTeleop, numRoboErrorsTeleop;
     Switch climbYesNo;
     EditText climbTime;
@@ -27,17 +26,20 @@ public class TeleopMenu2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teleop_menu2);
+        foulsTeleop = 0;
+        techFoulsTeleop = 0;
+        humanErrors = 0;
+        roboErrorsTeleop = 0;
         teleop2Array = getIntent();
         teamArray = teleop2Array.getStringArrayExtra("TeleopArray");
-        onClickListenerTeleopMenu2();
+        teleopMenu2Run();
 
 
 
     }
-    public void onClickListenerTeleopMenu2() {
+    public void teleopMenu2Run() {
 
         goToPostMatch = (Button) findViewById(R.id.goToPostMatch);
-        mainMenu = (Button) findViewById(R.id.mainMenu);
 
         subtractFoulsTeleop = (ImageButton) findViewById(R.id.subtractFoulsTeleop);
         addFoulsTeleop = (ImageButton) findViewById(R.id.addFoulsTeleop);
@@ -63,17 +65,17 @@ public class TeleopMenu2 extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String numFoulTeleop = Integer.toString(foulsTeleop);
-                        String numTechFoulTeleop = Integer.toString(techFoulsTeleop);
-                        String numHumanErrorTeleop = Integer.toString(humanErrors);
-                        String numRoboErrorTeleop = Integer.toString(roboErrorsTeleop);
+                        teamArray [18] = Integer.toString(foulsTeleop);
+                        teamArray [19] = Integer.toString(techFoulsTeleop);
+                        teamArray [20] = Integer.toString(humanErrors);
+                        teamArray [21] = Integer.toString(roboErrorsTeleop);
 
-                        String tToClimb = climbTime.getText().toString();
+                        teamArray [22] = climbTime.getText().toString();
 
                         if (climbYesNo.isChecked()) {
-                            String climbedYesNo = "fo'shizzle,";
+                            teamArray [23] = "fo'shizzle,";
                         } else {
-                            String climbedYesNo = "no deal home zlice,";
+                            teamArray [23] = "no deal home zlice,";
                         }
 
 
@@ -87,19 +89,6 @@ public class TeleopMenu2 extends AppCompatActivity {
                 }
 
         );
-
-        mainMenu.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(TeleopMenu2.this, MainMenu.class);
-                        startActivity(intent);
-
-                    }
-                }
-
-        );
-
 
         subtractFoulsTeleop.setOnClickListener(
                 new View.OnClickListener() {

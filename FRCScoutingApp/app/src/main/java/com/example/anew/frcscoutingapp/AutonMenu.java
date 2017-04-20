@@ -17,16 +17,14 @@ import java.util.ArrayList;
 public class AutonMenu extends AppCompatActivity {
 
 
-    Button backAutonMenu, goToAuton2, mainMenuAuton;
+    Button goToAuton2;
     ImageButton addBallsAuton, subtractBallsAuton;
     Integer numBallsAuton, gearStatus, ballStatus;
     RadioButton ballRadioButtonAuton, gearRadioButtonAuton;
     RadioGroup ballGroupAuton, gearGroupAuton;
     TextView numBallAccuracy;
-    EditText shooterAccuracy;
-    String ballStatusAuton, gearStatusAuton;
-    String [] teamArrayAuton;
-    Intent preMatchArray, startActivityAutonMenu;
+    String [] teamArray;
+    Intent autonArray, startActivityAutonMenu;
 
     public Integer addOne(int baseValue){
         baseValue = baseValue + 1;
@@ -38,8 +36,8 @@ public class AutonMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auton_menu);
         numBallsAuton = 0;
-        preMatchArray = getIntent();
-        teamArrayAuton = preMatchArray.getStringArrayExtra("PreMatchArray");
+        autonArray = getIntent();
+        teamArray = autonArray.getStringArrayExtra("PreMatchArray");
 
         autonMenu();
 
@@ -48,7 +46,6 @@ public class AutonMenu extends AppCompatActivity {
 
 
         goToAuton2 = (Button) findViewById(R.id.goToAuton2);
-        mainMenuAuton = (Button) findViewById(R.id.mainMenu);
 
         addBallsAuton = (ImageButton) findViewById(R.id.addBallsAuton);
         subtractBallsAuton = (ImageButton) findViewById(R.id.subtractBallsAuton);
@@ -65,21 +62,20 @@ public class AutonMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        ballStatus = ballGroupAuton.getCheckedRadioButtonId();
-                        ballRadioButtonAuton = (RadioButton)findViewById(ballStatus);
+                       ballStatus = ballGroupAuton.getCheckedRadioButtonId();
+                       ballRadioButtonAuton = (RadioButton)findViewById(ballStatus);
 
-                        teamArrayAuton [3] = ballGroupAuton.toString();
-
+                        teamArray [3] = ballGroupAuton.toString();
 
                         gearStatus = gearGroupAuton.getCheckedRadioButtonId();
                         gearRadioButtonAuton = (RadioButton)findViewById(gearStatus);
 
-                        teamArrayAuton [4] = gearGroupAuton.toString();
+                        teamArray [4] = gearGroupAuton.toString();
 
-                        teamArrayAuton [5] =  Integer.toString(numBallsAuton);
+                        teamArray [5] =  Integer.toString(numBallsAuton);
 
-                        startActivityAutonMenu = new Intent(AutonMenu.this, AutonMenu2.class);
-                        startActivityAutonMenu.putExtra("AutonArray", teamArrayAuton);
+                        startActivityAutonMenu = new Intent(AutonMenu.this, AutonMenu.class);
+                        startActivityAutonMenu.putExtra("AutonArray", teamArray);
                         startActivity(startActivityAutonMenu);
 
 
@@ -87,18 +83,7 @@ public class AutonMenu extends AppCompatActivity {
                 }
 
         );
-        mainMenuAuton.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(AutonMenu.this, MainMenu.class);
-                        startActivity(intent);
-
-                    }
-                }
-
-        );
-        addBallsAuton.setOnClickListener(
+       addBallsAuton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
