@@ -38,12 +38,10 @@ public class QRStager extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-<<<<<<< HEAD
+
                         String content = "";
                         for (String cont : teamArray)
                             content += (cont + ",");
-=======
->>>>>>> 2fccbf0b5371a878102c3af2fd82f5905d5d35fe
 
                         // Generate QR
                         QRCodeWriter writer = new QRCodeWriter();

@@ -36,17 +36,17 @@ public class MasterDataViewer extends AppCompatActivity {
     }
 
     public void searchForTeams() {
-       insertTeamNum = (EditText)findViewById(R.id.insertTeamNum);
-       match1 = (Button)findViewById(R.id.match1) ;
+        insertTeamNum = (EditText)findViewById(R.id.insertTeamNum);
+        match1 = (Button)findViewById(R.id.match1) ;
         match1.setText("Match " + teamArray [arrayIndexer + 1]);
 
         for (arrayIndexer = 0; arrayIndexer < teamArray.length + 1; ) {
             if (Integer.parseInt(teamArray [arrayIndexer]) == Integer.parseInt(insertTeamNum.getText().toString())) {
-            dataFound [0] = arrayIndexer;
+                dataFound [0] = arrayIndexer;
                 if(dataFound.length == 1 ) {
                     match1.setText("Match " + teamArray [arrayIndexer + 1]);
 
-            }
+                }
             }
             else if (dataFound.length == 2) {
             }

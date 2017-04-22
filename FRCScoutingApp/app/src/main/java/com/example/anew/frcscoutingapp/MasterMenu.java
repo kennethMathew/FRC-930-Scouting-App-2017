@@ -20,11 +20,10 @@ import com.google.zxing.integration.android.IntentIntegrator;
 
 public class MasterMenu extends AppCompatActivity {
     Button backMasterMenu, scanCode, viewDatabase, next;
-<<<<<<< HEAD
+
     Intent postMatchArray, masterFillArray;
     String [] teamArray;
-=======
->>>>>>> 2fccbf0b5371a878102c3af2fd82f5905d5d35fe
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +97,7 @@ public class MasterMenu extends AppCompatActivity {
             String re = scanResult.getContents();
 
             // String => array
-            for (int i = 0; i < re.length; i++)
+            for (int i = 0; i < re.length(); i++)
 
             // Display String for TESTING PURPOSES
             Toast.makeText(getApplicationContext(), re, Toast.LENGTH_LONG).show();
