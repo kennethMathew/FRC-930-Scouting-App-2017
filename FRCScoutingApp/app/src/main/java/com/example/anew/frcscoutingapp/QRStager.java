@@ -28,7 +28,7 @@ public class QRStager extends AppCompatActivity {
         backQRStager = (Button) findViewById(R.id.backQRStager);
         genQRCode = (Button) findViewById(R.id.genQRCode);
         mainMenu = (Button) findViewById(R.id.mainMenu);
-
+        next = (Button) findViewById(R.id.next);
 
         genQRCode.setOnClickListener(
                 new View.OnClickListener() {
@@ -53,11 +53,6 @@ public class QRStager extends AppCompatActivity {
                             e.printStackTrace();
                             System.out.print("Caught WriterException !!!");
                         }
-
-                        // if done:
-                        Intent intent = new Intent(QRStager.this, QRDeployer.class);
-                        startActivity(intent);
-
                     }
                 }
 
@@ -80,6 +75,17 @@ public class QRStager extends AppCompatActivity {
                         Intent intent = new Intent(QRStager.this, MainMenu.class);
                         startActivity(intent);
 
+                    }
+                }
+
+        );
+
+        next.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(QRStager.this, QRDeployer.class);
+                        startActivity(intent);
                     }
                 }
 

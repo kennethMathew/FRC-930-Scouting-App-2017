@@ -24,11 +24,13 @@ public class MasterMenu extends AppCompatActivity {
         setContentView(R.layout.activity_master_menu);
         onClickListenerMasterMenu();
     }
+
     public void onClickListenerMasterMenu() {
 
         backMasterMenu = (Button)findViewById(R.id.backMasterMenu);
         scanCode = (Button)findViewById(R.id.scanCode);
         viewDatabase = (Button)findViewById(R.id.viewDatabase);
+        next = (Button)findViewById(R.id.next);
 
         scanCode.setOnClickListener(
                 new View.OnClickListener() {
@@ -38,11 +40,6 @@ public class MasterMenu extends AppCompatActivity {
                         IntentIntegrator integrator = new IntentIntegrator(MasterMenu.this);
                         integrator.initiateScan();
                         System.out.print("SCANNING ***");
-
-                        // if done:
-                        Intent intent = new Intent(MasterMenu.this, MasterScanner.class);
-                        startActivity(intent);
-
                     }
                 }
 
@@ -70,6 +67,28 @@ public class MasterMenu extends AppCompatActivity {
 
         );
 
+        next.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MasterMenu.this, MasterScanner.class);
+                        startActivity(intent);
+                    }
+                }
 
+        );
+
+
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        if (scanResult != null) {
+            // handle scan result
+            String re = scanResult.getContents();
+            //textV.setText(re);
+            Toast.makeText(getApplicationContext(), re, Toast.LENGTH_LONG).show();
+            // NEED KENNETH Data Storage
+        }
     }
 }
