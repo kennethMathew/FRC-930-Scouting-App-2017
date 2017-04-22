@@ -5,6 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.widget.ImageView;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.google.zxing.integration.android.IntentResult;
+import com.google.zxing.qrcode.QRCodeWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.integration.android.IntentIntegrator;
+
 
 public class MasterMenu extends AppCompatActivity {
     Button backMasterMenu, scanCode, viewDatabase;
@@ -24,6 +34,12 @@ public class MasterMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+                        IntentIntegrator integrator = new IntentIntegrator(TestQRCode.this);
+                        integrator.initiateScan();
+                        System.out.print("SCANNING ***");
+
+                        // if done:
                         Intent intent = new Intent(MasterMenu.this, MasterScanner.class);
                         startActivity(intent);
 
