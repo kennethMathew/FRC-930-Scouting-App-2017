@@ -52,4 +52,12 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1" />
 
+    <Button
+        android:id="@+id/poopNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="434dp" />
+
 </android.support.constraint.ConstraintLayout>

@@ -16,11 +16,15 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.integration.android.IntentIntegrator;
 
 public class QRStager extends AppCompatActivity {
-    Button backQRStager, genQRCode, mainMenu;
+    Button backQRStager, genQRCode, mainMenu, next;
+    Intent inputData;
+    String [] teamArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrstager);
+        inputData = getIntent();
+        teamArray = inputData.getStringArrayExtra("PostMatchArray");
         onClickListenerQRStager();
     }
     public void onClickListenerQRStager() {
@@ -34,6 +38,7 @@ public class QRStager extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        
                         // Generate QR
                         QRCodeWriter writer = new QRCodeWriter();
                         try{
