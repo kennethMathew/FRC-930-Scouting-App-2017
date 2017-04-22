@@ -57,9 +57,8 @@ public class TeleopMenu2 extends AppCompatActivity {
         addRoboErrorsTeleop = (ImageButton) findViewById(R.id.addRoboErrorsTeleop);
         numRoboErrorsTeleop = (TextView)findViewById(R.id.numRoboErrorsTeleop);
 
+        climbTime = (EditText)findViewById(R.id.climbTime);
         climbYesNo = (Switch)findViewById(R.id.climbYesNo);
-
-
 
         goToPostMatch.setOnClickListener(
                 new View.OnClickListener() {
@@ -77,9 +76,6 @@ public class TeleopMenu2 extends AppCompatActivity {
                         } else {
                             teamArray [23] = "no deal home zlice";
                         }
-
-
-
 
                         Intent startActivityTeleop2Menu = new Intent(TeleopMenu2.this, PostMatchMenu.class);
                         startActivityTeleop2Menu.putExtra("Teleop2Array", teamArray);
