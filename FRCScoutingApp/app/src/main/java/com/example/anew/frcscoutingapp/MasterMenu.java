@@ -20,8 +20,11 @@ import com.google.zxing.integration.android.IntentIntegrator;
 
 public class MasterMenu extends AppCompatActivity {
     Button backMasterMenu, scanCode, viewDatabase, next;
+<<<<<<< HEAD
     Intent postMatchArray, masterFillArray;
     String [] teamArray;
+=======
+>>>>>>> 2fccbf0b5371a878102c3af2fd82f5905d5d35fe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +58,7 @@ public class MasterMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MasterMenu.this, MasterStager.class);
+                        Intent intent = new Intent(MasterMenu.this, MasterDataViewer.class);
                         startActivity(intent);
 
                     }
