@@ -51,9 +51,9 @@ public class PostMatchMenu extends AppCompatActivity {
                         if (winLoss.isChecked()) {
                             teamArray [24]= "fo'shizzle,";
                         } else {
-                            teamArray [25] = "no deal home zlice,";
+                            teamArray [24] = "no deal home zlice,";
                         }
-                        teamArray [26] = comments.getText().toString();
+                        teamArray [25] = comments.getText().toString();
 
                         Intent startActivityPostMatchMenu = new Intent(PostMatchMenu.this, QRStager.class);
                         startActivityPostMatchMenu.putExtra("PostMatchArray", teamArray);
