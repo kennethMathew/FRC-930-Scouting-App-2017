@@ -38,7 +38,7 @@ public class QRStager extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        
+
                         // Generate QR
                         QRCodeWriter writer = new QRCodeWriter();
                         try{
