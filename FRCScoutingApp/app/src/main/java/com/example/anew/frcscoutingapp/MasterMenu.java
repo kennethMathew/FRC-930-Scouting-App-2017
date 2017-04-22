@@ -20,19 +20,19 @@ import com.google.zxing.integration.android.IntentIntegrator;
 
 public class MasterMenu extends AppCompatActivity {
     Button backMasterMenu, scanCode, viewDatabase, next;
-    Intent postMatchArray, masterFillArray;
+    Intent masterFillArray;
     String [] teamArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_master_menu);
-        onClickListenerMasterMenu();
+        masterMenuRun();
         masterFillArray = getIntent();
         teamArray = masterFillArray.getStringArrayExtra("PostMatchArray");
     }
 
-    public void onClickListenerMasterMenu() {
+    public void masterMenuRun() {
 
         backMasterMenu = (Button)findViewById(R.id.backMasterMenu);
         scanCode = (Button)findViewById(R.id.scanCode);
@@ -61,9 +61,9 @@ public class MasterMenu extends AppCompatActivity {
                 }
         );
         backMasterMenu.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                        new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
                         Intent intent = new Intent(MasterMenu.this, MainMenu.class);
                         startActivity(intent);
 

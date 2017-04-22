@@ -29,6 +29,7 @@
         <activity android:name=".TeleopMenu" />
         <activity android:name=".TeleopMenu2" />
         <activity android:name=".AutonMenu2" />
+        <activity android:name=".MasterDataViewer"></activity>
     </application>
 
 </manifest>

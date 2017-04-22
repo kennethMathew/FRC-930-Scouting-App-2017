@@ -1,33 +1,26 @@
 package com.example.anew.frcscoutingapp;
 
-import android.content.Intent;
-import android.support.annotation.RequiresPermission;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
-
 public class MasterDataViewer extends AppCompatActivity {
     Integer arrayIndexer, dataFoundIndexer;
     String[] teamArray;
-    Intent getInfo;
     int[] dataFound;
     Button performSearch, match1, match2, match3, match4, match5, match6, match7, match8, match9, match10;
     EditText insertTeamNum;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_master_data_viewer);
-
         teamArray = new String[3024];
         dataFound = new int[10];
         dataFoundIndexer = 0;
-        searchForTeams();
-
+        arrayIndexer = 0;
+        //searchForTeams();
     }
-
     public void searchForTeams() {
         insertTeamNum = (EditText) findViewById(R.id.insertTeamNum);
         performSearch = (Button) findViewById(R.id.performSearch);
@@ -83,3 +76,4 @@ public class MasterDataViewer extends AppCompatActivity {
         }
     }
 }
+
