@@ -55,9 +55,9 @@ public class PostMatchMenu extends AppCompatActivity {
                         }
                         teamArray [26] = comments.getText().toString();
 
-                        Intent startActivityTeleop2Menu = new Intent(PostMatchMenu.this, QRStager.class);
-                        startActivityTeleop2Menu.putExtra("Teleop2Array", teamArray);
-                        startActivity(startActivityTeleop2Menu);
+                        Intent startActivityPostMatchMenu = new Intent(PostMatchMenu.this, QRStager.class);
+                        startActivityPostMatchMenu.putExtra("PostMatchArray", teamArray);
+                        startActivity(startActivityPostMatchMenu);
 
                     }
                 }

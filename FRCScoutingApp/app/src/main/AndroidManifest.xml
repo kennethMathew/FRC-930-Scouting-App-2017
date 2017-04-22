@@ -28,7 +28,7 @@
         <activity android:name=".AutonMenu" />
         <activity android:name=".TeleopMenu" />
         <activity android:name=".TeleopMenu2" />
-        <activity android:name=".AutonMenu2"></activity>
+        <activity android:name=".AutonMenu2" />
     </application>
 
 </manifest>
