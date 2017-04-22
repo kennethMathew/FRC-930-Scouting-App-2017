@@ -35,7 +35,7 @@ public class MasterMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        IntentIntegrator integrator = new IntentIntegrator(TestQRCode.this);
+                        IntentIntegrator integrator = new IntentIntegrator(MasterMenu.this);
                         integrator.initiateScan();
                         System.out.print("SCANNING ***");
 
