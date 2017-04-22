@@ -38,11 +38,14 @@ public class QRStager extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        
+                        String content = "";
+                        for (String cont : teamArray)
+                            content += (cont + ",");
+
                         // Generate QR
                         QRCodeWriter writer = new QRCodeWriter();
                         try{
-                            BitMatrix bitMatrix = writer.encode("content", BarcodeFormat.QR_CODE, 512, 512);
+                            BitMatrix bitMatrix = writer.encode(content, BarcodeFormat.QR_CODE, 512, 512);
                             int width = bitMatrix.getWidth();
                             int height = bitMatrix.getHeight();
                             Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);

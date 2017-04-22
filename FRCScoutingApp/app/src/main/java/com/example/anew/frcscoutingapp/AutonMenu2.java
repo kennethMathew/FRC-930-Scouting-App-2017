@@ -61,20 +61,20 @@ public class AutonMenu2 extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        teamArray [6] = numFoulsAuton.toString() + ",";
+                        teamArray [6] = numFoulsAuton.toString();
 
 
-                        teamArray [7] = numTechFoulsAuton.toString() + ",";
+                        teamArray [7] = numTechFoulsAuton.toString();
 
 
-                        teamArray [8] = numRoboErrorsAuton.toString() + ",";
+                        teamArray [8] = numRoboErrorsAuton.toString();
 
 
                         if (crossBaseline.isChecked()) {
-                            teamArray [9] = "fo'shizzle,";
+                            teamArray [9] = "fo'shizzle";
 
                         } else {
-                            teamArray [10] =  "no deal home zlice,";
+                            teamArray [10] =  "no deal home zlice";
 
                         }
 

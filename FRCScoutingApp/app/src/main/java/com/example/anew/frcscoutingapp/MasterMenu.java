@@ -20,7 +20,7 @@ import com.google.zxing.integration.android.IntentIntegrator;
 
 public class MasterMenu extends AppCompatActivity {
     Button backMasterMenu, scanCode, viewDatabase, next;
-    Intent postMatchArray;
+    Intent postMatchArray, masterFillArray;
     String [] teamArray;
 
     @Override
@@ -28,6 +28,8 @@ public class MasterMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_master_menu);
         onClickListenerMasterMenu();
+        masterFillArray = getIntent();
+        teamArray = masterFillArray.getStringArrayExtra("PostMatchArray");
     }
 
     public void onClickListenerMasterMenu() {
@@ -92,9 +94,13 @@ public class MasterMenu extends AppCompatActivity {
             // handle scan result
             String re = scanResult.getContents();
 
-            //textV.setText(re);
+            // String => array
+            for (int i = 0; i < re.length; i++)
+
+            // Display String for TESTING PURPOSES
             Toast.makeText(getApplicationContext(), re, Toast.LENGTH_LONG).show();
-            // NEED KENNETH Data Storage
+
+            // TODO arrays storage
         }
     }
 }
