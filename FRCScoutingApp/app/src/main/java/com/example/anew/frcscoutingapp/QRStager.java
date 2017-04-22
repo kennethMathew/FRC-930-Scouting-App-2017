@@ -38,11 +38,9 @@ public class QRStager extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
                         String content = "";
                         for (String cont : teamArray)
                             content += (cont + ",");
-
                         // Generate QR
                         QRCodeWriter writer = new QRCodeWriter();
                         try{
@@ -72,10 +70,8 @@ public class QRStager extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent intent = new Intent(QRStager.this, ScouterMenu.class);
                         startActivity(intent);
-
                     }
                 }
-
         );
         mainMenu.setOnClickListener(
                 new View.OnClickListener() {
@@ -83,10 +79,8 @@ public class QRStager extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent intent = new Intent(QRStager.this, MainMenu.class);
                         startActivity(intent);
-
                     }
                 }
-
         );
 
         next.setOnClickListener(
@@ -97,7 +91,7 @@ public class QRStager extends AppCompatActivity {
                         startActivity(intent);
                     }
                 }
-
         );
     }
+
 }
