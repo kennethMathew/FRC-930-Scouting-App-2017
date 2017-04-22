@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 
 public class AutonMenu2 extends AppCompatActivity {
-    Button backAutonMenu2, goToTeleop;
+    Button goToTeleop;
     CheckBox crossBaseline;
     ImageButton subtractFoulsAuton, addFoulsAuton, subtractTechFoulsAuton, addTechFoulsAuton, subtractRoboErrorsAuton, addRoboErrorsAuton;
     Integer numFouls, numTechFouls, numRoboErrors;
@@ -19,13 +19,7 @@ public class AutonMenu2 extends AppCompatActivity {
     Intent auton2Array, startActivityAutonMenu2;
     String [] teamArray;
 
-    public Integer addOne(int baseValue){
-        baseValue = baseValue + 1;
-        return baseValue;
-
-    }
-
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auton_menu2);
@@ -81,22 +75,6 @@ public class AutonMenu2 extends AppCompatActivity {
                         startActivityAutonMenu2 = new Intent(AutonMenu2.this, TeleopMenu.class);
                         startActivityAutonMenu2.putExtra("Auton2Array", teamArray);
                         startActivity(startActivityAutonMenu2);
-
-                    }
-                }
-
-        );
-
-
-
-
-        backAutonMenu2.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(AutonMenu2.this, AutonMenu.class);
-                        startActivity(intent);
-
 
                     }
                 }

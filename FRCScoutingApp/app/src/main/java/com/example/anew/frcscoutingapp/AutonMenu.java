@@ -74,7 +74,7 @@ public class AutonMenu extends AppCompatActivity {
 
                         teamArray [5] =  Integer.toString(numBallsAuton);
 
-                        startActivityAutonMenu = new Intent(AutonMenu.this, AutonMenu.class);
+                        startActivityAutonMenu = new Intent(AutonMenu.this, AutonMenu2.class);
                         startActivityAutonMenu.putExtra("AutonArray", teamArray);
                         startActivity(startActivityAutonMenu);
 

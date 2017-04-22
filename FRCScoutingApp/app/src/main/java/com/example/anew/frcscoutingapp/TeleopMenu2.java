@@ -73,15 +73,15 @@ public class TeleopMenu2 extends AppCompatActivity {
                         teamArray [22] = climbTime.getText().toString();
 
                         if (climbYesNo.isChecked()) {
-                            teamArray [23] = "fo'shizzle,";
+                            teamArray [23] = "fo'shizzle";
                         } else {
-                            teamArray [23] = "no deal home zlice,";
+                            teamArray [23] = "no deal home zlice";
                         }
 
 
 
 
-                        Intent startActivityTeleop2Menu = new Intent(TeleopMenu2.this, TeleopMenu2.class);
+                        Intent startActivityTeleop2Menu = new Intent(TeleopMenu2.this, PostMatchMenu.class);
                         startActivityTeleop2Menu.putExtra("Teleop2Array", teamArray);
                         startActivity(startActivityTeleop2Menu);
 
