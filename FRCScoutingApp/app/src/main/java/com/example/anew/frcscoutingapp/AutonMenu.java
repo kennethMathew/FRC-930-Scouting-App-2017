@@ -22,7 +22,7 @@ public class AutonMenu extends AppCompatActivity {
     Integer numBallsAuton, gearStatus, ballStatus;
     RadioButton ballRadioButtonAuton, gearRadioButtonAuton;
     RadioGroup ballGroupAuton, gearGroupAuton;
-    TextView numBallAccuracy;
+    TextView ballsAuton;
     String [] teamArray;
     Intent autonArray, startActivityAutonMenu;
 
@@ -56,7 +56,7 @@ public class AutonMenu extends AppCompatActivity {
         gearGroupAuton = (RadioGroup) findViewById(R.id.gearGroupAuton);
         gearRadioButtonAuton = (RadioButton) findViewById(R.id.notScoredGearsAuton);
 
-        numBallAccuracy = (TextView) findViewById(R.id.numBallsAuton);
+        ballsAuton = (TextView) findViewById(R.id.ballsAuton);
 
         goToAuton2.setOnClickListener(
                 new View.OnClickListener() {
@@ -88,8 +88,8 @@ public class AutonMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         numBallsAuton = numBallsAuton + 1;
-                        numBallAccuracy.setTextSize(20);
-                        numBallAccuracy.setText(Integer.toString(numBallsAuton));
+                        ballsAuton.setTextSize(20);
+                        ballsAuton.setText("# Balls: " + Integer.toString(numBallsAuton));
 
                     }
                 }
@@ -100,8 +100,8 @@ public class AutonMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         numBallsAuton = numBallsAuton - 1;
-                        numBallAccuracy.setTextSize(20);
-                        numBallAccuracy.setText(Integer.toString(numBallsAuton));
+                        ballsAuton.setTextSize(20);
+                        ballsAuton.setText("# Balls: " + Integer.toString(numBallsAuton));
 
                     }
                 }

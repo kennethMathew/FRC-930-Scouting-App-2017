@@ -25,14 +25,16 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:text="Rope"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
         tools:ignore="HardcodedText,MissingConstraints"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/climbYesNo"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        tools:layout_editor_absoluteY="144dp" />
 
     <EditText
         android:id="@+id/climbTime"
@@ -61,111 +63,119 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="# of Human Errors:"
-        android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints"
-        app:layout_constraintRight_toLeftOf="@+id/numHumanErrors"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="@+id/subtractHumanErrors"
+        android:layout_marginBottom="12dp"
         android:layout_marginEnd="7dp"
-        android:layout_marginBottom="12dp" />
+        android:text="# of Human Errors:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/subtractHumanErrors"
+        app:layout_constraintRight_toLeftOf="@+id/numHumanErrors"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintRight_creator="1" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="# of Fouls:"
-        android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
+        android:layout_marginLeft="26dp"
         android:layout_marginStart="26dp"
+        android:text="# of Fouls:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/numFoulsTeleop"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="@+id/textView12"
-        android:layout_marginLeft="26dp" />
+        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="# of Robot Errors:"
-        android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints"
-        app:layout_constraintRight_toLeftOf="@+id/numRoboErrorsTeleop"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="@+id/subtractRoboErrorsTeleop"
+        android:layout_marginBottom="13dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="13dp" />
+        android:text="# of Robot Errors:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/subtractRoboErrorsTeleop"
+        app:layout_constraintRight_toLeftOf="@+id/numRoboErrorsTeleop"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintRight_creator="1" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="# of Tech Fouls:"
-        android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints"
         android:layout_marginStart="22dp"
+        android:text="# of Tech Fouls:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/numTechFoulsTeleop"
+        app:layout_constraintLeft_toRightOf="@+id/subtractTechFoulsTeleop"
+        tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/subtractTechFoulsTeleop" />
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:id="@+id/numFoulsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginStart="10dp"
         android:text="0"
+        android:textColor="@android:color/darker_gray"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintLeft_toRightOf="@+id/textView10"
         tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        android:layout_marginStart="10dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintLeft_toRightOf="@+id/textView10" />
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:id="@+id/numTechFoulsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="3dp"
         android:text="0"
+        android:textColor="@android:color/darker_gray"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/addTechFoulsTeleop"
+        app:layout_constraintLeft_toRightOf="@+id/textView12"
         tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="3dp"
-        app:layout_constraintBottom_toBottomOf="@+id/addTechFoulsTeleop"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="6dp"
-        app:layout_constraintLeft_toRightOf="@+id/textView12" />
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:id="@+id/numHumanErrors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
+        android:textColor="@android:color/darker_gray"
         android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/numRoboErrorsTeleop"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+        app:layout_constraintLeft_toRightOf="@+id/numRoboErrorsTeleop"
+        app:layout_constraintRight_toRightOf="@+id/numRoboErrorsTeleop"
+        tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/numRoboErrorsTeleop" />
+        tools:layout_constraintRight_creator="1" />
 
     <TextView
         android:id="@+id/numRoboErrorsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints"
-        app:layout_constraintRight_toLeftOf="@+id/addRoboErrorsTeleop"
-        tools:layout_constraintRight_creator="1"
         android:layout_marginEnd="15dp"
+        android:text="0"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
-        tools:layout_constraintBaseline_creator="1" />
+        app:layout_constraintRight_toLeftOf="@+id/addRoboErrorsTeleop"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintRight_creator="1" />
 
     <ImageButton
         android:id="@+id/addTechFoulsTeleop"

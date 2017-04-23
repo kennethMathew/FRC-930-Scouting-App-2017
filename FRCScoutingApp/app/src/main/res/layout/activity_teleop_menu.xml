@@ -25,28 +25,30 @@
         android:id="@+id/balls"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:layout_marginStart="16dp"
         android:text="Balls"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/ballGroupTeleop"
+        app:layout_constraintLeft_toLeftOf="parent"
         tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/ballGroupTeleop"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="34dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:id="@+id/gears"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Gears"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:ignore="HardcodedText,MissingConstraints"
-        android:layout_marginStart="16dp"
+        android:textColor="@android:color/darker_gray"
         app:layout_constraintBaseline_toBaselineOf="@+id/gearsTimer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:id="@+id/ballsTeleop"
@@ -54,26 +56,28 @@
         android:layout_height="wrap_content"
         android:text="# of Balls:"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/darker_gray"
         android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints"
         app:layout_constraintBaseline_toBaselineOf="@+id/numBallsTeleop"
+        app:layout_constraintLeft_toLeftOf="@+id/ballsTimer"
+        tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/ballsTimer" />
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:id="@+id/gearsTeleop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="-270dp"
         android:text="# of Gears:"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/darker_gray"
         android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
         app:layout_constraintBaseline_toBaselineOf="@+id/numGearsTeleop"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="@+id/gearsTimer"
-        android:layout_marginLeft="-270dp" />
+        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
     <ImageButton
         android:id="@+id/addGearsTeleop"
