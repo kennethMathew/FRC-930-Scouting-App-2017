@@ -64,6 +64,7 @@ public class QRStager extends AppCompatActivity {
                 }
 
         );
+
         backQRStager.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -73,6 +74,7 @@ public class QRStager extends AppCompatActivity {
                     }
                 }
         );
+
         mainMenu.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
