@@ -69,13 +69,13 @@ public class TeleopMenu2 extends AppCompatActivity {
                         teamArray [20] = Integer.toString(humanErrors);
                         teamArray [21] = Integer.toString(roboErrorsTeleop);
 
-                        teamArray [22] = climbTime.getText().toString();
-
                         if (climbYesNo.isChecked()) {
-                            teamArray [23] = "fo'shizzle";
+                            teamArray [22] = "fo'shizzle";
                         } else {
-                            teamArray [23] = "no deal home zlice";
+                            teamArray [22] = "no deal home zlice";
                         }
+
+                        teamArray [23] = climbTime.getText().toString();
 
                         Intent startActivityTeleop2Menu = new Intent(TeleopMenu2.this, PostMatchMenu.class);
                         startActivityTeleop2Menu.putExtra("Teleop2Array", teamArray);

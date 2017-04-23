@@ -16,7 +16,7 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.integration.android.IntentIntegrator;
 
 public class QRStager extends AppCompatActivity {
-    Button backQRStager, genQRCode, mainMenu, next;
+    Button backQRStager, genQRCode, mainMenu;
     Intent inputData;
     String [] teamArray;
     @Override
@@ -32,7 +32,7 @@ public class QRStager extends AppCompatActivity {
         backQRStager = (Button) findViewById(R.id.backQRStager);
         genQRCode = (Button) findViewById(R.id.genQRCode);
         mainMenu = (Button) findViewById(R.id.mainMenu);
-        next = (Button) findViewById(R.id.next);
+
 
         genQRCode.setOnClickListener(
                 new View.OnClickListener() {
@@ -80,16 +80,6 @@ public class QRStager extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(QRStager.this, MainMenu.class);
-                        startActivity(intent);
-                    }
-                }
-        );
-
-        next.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(QRStager.this, QRDeployer.class);
                         startActivity(intent);
                     }
                 }

@@ -21,18 +21,6 @@
         tools:layout_constraintRight_creator="1"
         app:layout_constraintHorizontal_bias="0.502" />
 
-    <Button
-        android:id="@+id/mainMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Main Menu"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,RtlHardcoded" />
-
     <TextView
         android:id="@+id/balls"
         android:layout_width="wrap_content"
@@ -80,11 +68,12 @@
         android:text="# of Gears:"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints"
+        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
         app:layout_constraintBaseline_toBaselineOf="@+id/numGearsTeleop"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/gearsTimer" />
+        app:layout_constraintLeft_toLeftOf="@+id/gearsTimer"
+        android:layout_marginLeft="-270dp" />
 
     <ImageButton
         android:id="@+id/addGearsTeleop"
@@ -104,8 +93,8 @@
         android:id="@+id/subtractGearsTeleop"
         android:layout_width="0dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="23dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="17dp"
         android:tint="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/goToTeleop2"
         app:layout_constraintLeft_toLeftOf="@+id/subtractBallsTeleop"
@@ -254,14 +243,13 @@
         android:layout_width="wrap_content"
         android:layout_height="116dp"
         android:layout_marginBottom="101dp"
-        android:layout_marginLeft="22dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/submitBallsTime"
         app:layout_constraintLeft_toLeftOf="@+id/ballsTimer"
         tools:ignore="MissingConstraints,RtlHardcoded"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1">
+        tools:layout_constraintLeft_creator="1">
 
         <RadioButton
             android:id="@+id/noAttemptBallsTeleop"
@@ -271,7 +259,7 @@
             android:checked="true"
             android:text="No Attempt"
             app:buttonTint="@android:color/holo_blue_dark"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText,MissingPrefix" />
 
         <RadioButton
             android:id="@+id/lowGoalTeleop"
@@ -280,7 +268,7 @@
             android:layout_weight="1"
             android:text="Low"
             app:buttonTint="@android:color/holo_blue_dark"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText,MissingPrefix" />
 
         <RadioButton
             android:id="@+id/highGoalTeleop"
@@ -289,7 +277,7 @@
             android:layout_weight="1"
             android:text="High"
             app:buttonTint="@android:color/holo_blue_dark"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText,MissingPrefix" />
     </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>

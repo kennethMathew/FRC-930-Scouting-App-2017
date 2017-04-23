@@ -7,18 +7,6 @@
     tools:context="com.example.anew.frcscoutingapp.TeleopMenu2">
 
     <Button
-        android:id="@+id/mainMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Main Menu"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,RtlHardcoded" />
-
-    <Button
         android:id="@+id/goToPostMatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,7 +41,6 @@
         android:layout_marginBottom="74dp"
         android:layout_marginEnd="59dp"
         android:layout_marginRight="59dp"
-        android:layout_marginTop="73dp"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:drawableTint="@android:color/holo_blue_dark"
         android:ems="10"
@@ -66,7 +53,6 @@
         android:textCursorDrawable="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/numFoulsTeleop"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mainMenu"
         tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintTop_creator="1" />
@@ -91,12 +77,13 @@
         android:layout_height="wrap_content"
         android:text="# of Fouls:"
         android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints"
+        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
         android:layout_marginStart="26dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/numFoulsTeleop"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/textView12" />
+        app:layout_constraintLeft_toLeftOf="@+id/textView12"
+        android:layout_marginLeft="26dp" />
 
     <TextView
         android:id="@+id/textView11"
@@ -243,7 +230,7 @@
         android:id="@+id/subtractFoulsTeleop"
         android:layout_width="0dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginBottom="56dp"
         android:layout_marginTop="57dp"
         android:tint="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="@+id/subtractTechFoulsTeleop"
@@ -309,8 +296,8 @@
 
     <Switch
         android:id="@+id/climbYesNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
         android:layout_marginBottom="85dp"
         android:layout_marginStart="28dp"
         android:text="Climb?"
@@ -318,10 +305,9 @@
         android:trackTint="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintLeft_toRightOf="@+id/textView"
-        tools:ignore="HardcodedText,MissingConstraints"
+        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1"
         android:layout_marginLeft="28dp" />
 
 </android.support.constraint.ConstraintLayout>
