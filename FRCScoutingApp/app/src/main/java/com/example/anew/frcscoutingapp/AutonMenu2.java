@@ -86,7 +86,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         numFouls = numFouls - 1;
-                        numFoulsAuton.setText(" # Fouls: " + Integer.toString(numFouls));
+                        numFoulsAuton.setText("     # Fouls: " + Integer.toString(numFouls));
 
                     }
                 }
@@ -98,7 +98,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         numFouls = numFouls + 1;
-                        numFoulsAuton.setText(" # Fouls: " + Integer.toString(numFouls));
+                        numFoulsAuton.setText("     # Fouls: " + Integer.toString(numFouls));
                     }
                 }
 
@@ -109,7 +109,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         numTechFouls = numTechFouls - 1;
-                        numTechFoulsAuton.setText(" # Tech Fouls: " + Integer.toString(numFouls));
+                        numTechFoulsAuton.setText("     # Tech Fouls: " + Integer.toString(numTechFouls));
                     }
                 }
 
@@ -120,7 +120,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         numTechFouls = numTechFouls + 1;
-                        numTechFoulsAuton.setText(" # Tech Fouls: " + Integer.toString(numFouls));
+                        numTechFoulsAuton.setText("     # Tech Fouls: " + Integer.toString(numTechFouls));
                     }
                 }
 
@@ -131,7 +131,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         numRoboErrors = numRoboErrors - 1;
-                        numRoboErrorsAuton.setText(" # R Errors: " + Integer.toString(numFouls));
+                        numRoboErrorsAuton.setText("   # R Errors: " + Integer.toString(numRoboErrors));
                     }
                 }
 
@@ -141,7 +141,7 @@ public class AutonMenu2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         numRoboErrors = numRoboErrors + 1;
-                        numRoboErrorsAuton.setText(" # R Errors: " + Integer.toString(numFouls));
+                        numRoboErrorsAuton.setText("   # R Errors: " + Integer.toString(numRoboErrors));
                     }
                 }
 

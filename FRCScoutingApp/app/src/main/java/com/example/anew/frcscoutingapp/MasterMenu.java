@@ -65,11 +65,10 @@ public class MasterMenu extends AppCompatActivity {
                     }
                 }
         );
-        viewDatabase.setOnClickListener(
+       viewDatabase.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
                         try {
                             teamMatchData = new File("Internal shared storage\\FRCScoutingData" + File.separator + "Match" + teamStatsArr.get(1) + "Data");
                             bwriter = new BufferedWriter(new FileWriter(teamMatchData));
@@ -100,6 +99,8 @@ public class MasterMenu extends AppCompatActivity {
                             // e.printStackTrace();
                             System.err.println(e);
                         }
+
+
 
                     }
                 }

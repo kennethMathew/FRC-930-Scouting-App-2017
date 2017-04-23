@@ -43,19 +43,19 @@ public class TeleopMenu2 extends AppCompatActivity {
 
         subtractFoulsTeleop = (ImageButton) findViewById(R.id.subtractFoulsTeleop);
         addFoulsTeleop = (ImageButton) findViewById(R.id.addFoulsTeleop);
-        numFoulsTeleop = (TextView)findViewById(R.id.numFoulsTeleop);
+        numFoulsTeleop = (TextView)findViewById(R.id.foulsTeleop);
 
         subtractTechFoulsTeleop = (ImageButton) findViewById(R.id.subtractTechFoulsTeleop);
         addTechFoulsTeleop = (ImageButton) findViewById(R.id.addTechFoulsTeleop);
-        numTechFoulsTeleop = (TextView)findViewById(R.id.numTechFoulsTeleop);
+        numTechFoulsTeleop = (TextView)findViewById(R.id.techFoulsTeleop);
 
         subtractHumanErrors = (ImageButton) findViewById(R.id.subtractHumanErrors);
         addHumanErrors = (ImageButton) findViewById(R.id.addHumanErrors);
-        numHumanErrorsTeleop = (TextView)findViewById(R.id.numHumanErrors);
+        numHumanErrorsTeleop = (TextView)findViewById(R.id.humanErrorsTeleop);
 
         subtractRoboErrorsTeleop = (ImageButton) findViewById(R.id.subtractRoboErrorsTeleop);
         addRoboErrorsTeleop = (ImageButton) findViewById(R.id.addRoboErrorsTeleop);
-        numRoboErrorsTeleop = (TextView)findViewById(R.id.numRoboErrorsTeleop);
+        numRoboErrorsTeleop = (TextView)findViewById(R.id.roboErrorsTeleop);
 
         climbTime = (EditText)findViewById(R.id.climbTime);
         climbYesNo = (Switch)findViewById(R.id.climbYesNo);
@@ -91,7 +91,8 @@ public class TeleopMenu2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         foulsTeleop = foulsTeleop - 1;
-                        numFoulsTeleop.setText(Integer.toString(foulsTeleop));
+                        numFoulsTeleop.setTextSize(25);
+                        numFoulsTeleop.setText("# Fouls: " + Integer.toString(foulsTeleop));
                     }
                 }
 
@@ -104,7 +105,8 @@ public class TeleopMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         foulsTeleop = foulsTeleop + 1;
-                        numFoulsTeleop.setText(Integer.toString(foulsTeleop));
+                        numFoulsTeleop.setTextSize(25);
+                        numFoulsTeleop.setText("# Fouls: " + Integer.toString(foulsTeleop));
                     }
                 }
 
@@ -114,7 +116,8 @@ public class TeleopMenu2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         techFoulsTeleop = techFoulsTeleop - 1;
-                        numTechFoulsTeleop.setText(Integer.toString(techFoulsTeleop));
+                        numTechFoulsTeleop.setTextSize(25);
+                        numTechFoulsTeleop.setText("# Tech Fouls: " + Integer.toString(techFoulsTeleop));
                     }
                 }
 
@@ -124,7 +127,8 @@ public class TeleopMenu2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         techFoulsTeleop = techFoulsTeleop + 1;
-                        numTechFoulsTeleop.setText(Integer.toString(techFoulsTeleop));
+                        numTechFoulsTeleop.setTextSize(25);
+                        numTechFoulsTeleop.setText("# Tech Fouls: " + Integer.toString(techFoulsTeleop));
                     }
                 }
 
@@ -134,7 +138,8 @@ public class TeleopMenu2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         humanErrors = humanErrors - 1;
-                        numHumanErrorsTeleop.setText(Integer.toString(humanErrors));
+                        numHumanErrorsTeleop.setTextSize(25);
+                        numHumanErrorsTeleop.setText("   # H Errors: " + Integer.toString(humanErrors));
                     }
                 }
 
@@ -144,7 +149,8 @@ public class TeleopMenu2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         humanErrors = humanErrors + 1;
-                        numHumanErrorsTeleop.setText(Integer.toString(humanErrors));
+                        numHumanErrorsTeleop.setTextSize(25);
+                        numHumanErrorsTeleop.setText("   # H Errors: " + Integer.toString(humanErrors));
                     }
                 }
 
@@ -154,7 +160,8 @@ public class TeleopMenu2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         roboErrorsTeleop = roboErrorsTeleop - 1;
-                        numRoboErrorsTeleop.setText(Integer.toString(roboErrorsTeleop));
+                        numRoboErrorsTeleop.setTextSize(25);
+                        numRoboErrorsTeleop.setText("   # R Errors: " + Integer.toString(roboErrorsTeleop));
                     }
                 }
 
@@ -164,7 +171,8 @@ public class TeleopMenu2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         roboErrorsTeleop = roboErrorsTeleop + 1;
-                        numRoboErrorsTeleop.setText(Integer.toString(roboErrorsTeleop));
+                        numRoboErrorsTeleop.setTextSize(25);
+                        numRoboErrorsTeleop.setText("   # R Errors: " + Integer.toString(roboErrorsTeleop));
                     }
                 }
 

@@ -88,7 +88,7 @@ public class AutonMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         numBallsAuton = numBallsAuton + 1;
-                        ballsAuton.setTextSize(20);
+                        ballsAuton.setTextSize(30);
                         ballsAuton.setText("# Balls: " + Integer.toString(numBallsAuton));
 
                     }
@@ -100,7 +100,7 @@ public class AutonMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         numBallsAuton = numBallsAuton - 1;
-                        ballsAuton.setTextSize(20);
+                        ballsAuton.setTextSize(30);
                         ballsAuton.setText("# Balls: " + Integer.toString(numBallsAuton));
 
                     }

@@ -63,8 +63,8 @@ public class TeleopMenu extends AppCompatActivity {
         subtractGearsTeleop = (ImageButton) findViewById(R.id.subtractGearsTeleop);
         addGearsTeleop = (ImageButton) findViewById(R.id.addGearsTeleop);
 
-        numBallsTeleop = (TextView) findViewById(R.id.numBallsTeleop);
-        numGearsTeleop = (TextView) findViewById(R.id.numGearsTeleop);
+        numBallsTeleop = (TextView) findViewById(R.id.ballsTeleop);
+        numGearsTeleop = (TextView) findViewById(R.id.gearsTeleop);
 
         submitBallsTime = (Button) findViewById(R.id.submitBallsTime);
         submitGearsTime = (Button) findViewById(R.id.submitGearsTime);
@@ -134,7 +134,8 @@ public class TeleopMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         ballsTeleop = ballsTeleop - 1;
-                        numBallsTeleop.setText(Integer.toString(ballsTeleop));
+                        numBallsTeleop.setTextSize(30);
+                        numBallsTeleop.setText("# Balls: " + Integer.toString(ballsTeleop));
                     }
                 }
 
@@ -144,7 +145,8 @@ public class TeleopMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         ballsTeleop = ballsTeleop + 1;
-                        numBallsTeleop.setText(Integer.toString(ballsTeleop));
+                        numBallsTeleop.setTextSize(30);
+                        numBallsTeleop.setText("# Balls: " + Integer.toString(ballsTeleop));
                     }
                 }
 
@@ -154,7 +156,8 @@ public class TeleopMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         gearsTeleop = gearsTeleop - 1;
-                        numGearsTeleop.setText(Integer.toString(gearsTeleop));
+                        numGearsTeleop.setTextSize(30);
+                        numGearsTeleop.setText("# Gears: " + Integer.toString(gearsTeleop));
                     }
                 }
 
@@ -164,7 +167,8 @@ public class TeleopMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         gearsTeleop = gearsTeleop + 1;
-                        numGearsTeleop.setText(Integer.toString(gearsTeleop));
+                        numGearsTeleop.setTextSize(30);
+                        numGearsTeleop.setText("# Gears: " + Integer.toString(gearsTeleop));
                     }
                 }
 

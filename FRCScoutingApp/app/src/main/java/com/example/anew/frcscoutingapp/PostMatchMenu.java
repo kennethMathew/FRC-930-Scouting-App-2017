@@ -71,11 +71,13 @@ public class PostMatchMenu extends AppCompatActivity {
                     loss.setBackgroundColor(Color.parseColor("#FF0000"));
                     loss.setTextSize(25);
                     win.setBackgroundColor(Color.parseColor("#FF0000"));
+                    winLoss.setBackgroundColor(Color.parseColor("#FF0000"));
 
                 }else{
-                    win.setBackgroundColor(Color.parseColor("#0000ff"));
+                    win.setBackgroundColor(Color.parseColor("#00ff00"));
                     win.setTextSize(25);
-                    loss.setBackgroundColor(Color.parseColor("#0000ff"));
+                    loss.setBackgroundColor(Color.parseColor("#00ff00"));
+                    winLoss.setBackgroundColor(Color.parseColor("#00ff00"));
                 }
             }
         });
