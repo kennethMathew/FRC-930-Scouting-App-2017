@@ -78,7 +78,7 @@
         android:text="Balls"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@android:color/darker_gray"
-        tools:ignore="HardcodedText,MissingConstraints"
+        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
         android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         tools:layout_constraintTop_creator="1"

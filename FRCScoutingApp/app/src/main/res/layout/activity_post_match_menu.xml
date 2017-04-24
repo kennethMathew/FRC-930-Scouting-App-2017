@@ -75,7 +75,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="LOSS"
-        tools:ignore="HardcodedText"
+        tools:ignore="HardcodedText,RtlHardcoded"
         android:layout_marginRight="16dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
