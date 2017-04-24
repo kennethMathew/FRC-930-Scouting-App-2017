@@ -34,91 +34,54 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
-
 public class MasterMenu extends AppCompatActivity {
     Button backMasterMenu, scanCode, viewDatabase;
     Intent masterFillArray;
     ArrayList<String> matchDataArray, teamStatsArr;
     FileWriter fwriter;
     Integer matchDataIndexer;
-
+    String allData, matchNum;
 
     public Integer addOne(int baseValue) {
         baseValue = baseValue + 1;
         return baseValue;
     }
 
-    public String matchData0Return() {
-        try {
-            String matchData0 = matchDataArray.get(0) + "\n";
-            return matchData0;
-        } catch (ArrayIndexOutOfBoundsException e) {
-            e.getMessage();
-            String matchData0 = "";
-            return matchData0;
-        }
+    public String matchDataReturn() {
+       if (matchDataArray.size() == 0){
+           allData = "";
+
+       } else if(matchDataArray.size() == 1) {
+           allData = matchDataArray.get(0) + "\n";
+
+       }else if(matchDataArray.size() == 2) {
+           allData = matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n";
+
+       }else if(matchDataArray.size() == 3) {
+           allData = matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n";
+
+       }else if(matchDataArray.size() == 4) {
+           allData = matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" +
+                   matchDataArray.get(0) + "\n";
+
+       }else if(matchDataArray.size() == 5) {
+           allData = matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" +
+                   matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n";
+       }else {
+           allData = matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" +
+                   matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n";
+       }
+       return allData;
     }
 
-    public String matchData1Return() {
-        try {
-            String matchData1 = matchDataArray.get(1) + "\n";
-            return matchData1;
-        } catch (ArrayIndexOutOfBoundsException e) {
-            e.getMessage();
-            String matchData1 = "";
-            return matchData1;
-        }
-    }
 
-    public String matchData2Return() {
-        try {
-            String matchData2 = matchDataArray.get(2) + "\n";
-            return matchData2;
-        } catch (ArrayIndexOutOfBoundsException e) {
-            e.getMessage();
-            String matchData2 = "";
-            return matchData2;
-        }
-    }
-
-    public String matchData3Return() {
-        try {
-            String matchData3 = matchDataArray.get(3) + "\n";
-            return matchData3;
-        } catch (ArrayIndexOutOfBoundsException e) {
-            e.getMessage();
-            String matchData3 = "";
-            return matchData3;
-        }
-    }
-
-    public String matchData4Return() {
-        try {
-            String matchData4 = matchDataArray.get(4) + "\n";
-            return matchData4;
-        } catch (ArrayIndexOutOfBoundsException e) {
-            e.getMessage();
-            String matchData4 = "";
-            return matchData4;
-        }
-    }
-
-    public String matchData5Return() {
-        try {
-            String matchData5 = matchDataArray.get(5) + "\n";
-            return matchData5;
-        } catch (ArrayIndexOutOfBoundsException e) {
-            e.getMessage();
-            String matchData5 = "";
-            return matchData5;
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_master_menu);
         matchDataArray = new ArrayList<String>();
+        teamStatsArr = new ArrayList<String>();
         matchDataIndexer = 0;
         masterMenuRun();
 
@@ -146,13 +109,19 @@ public class MasterMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String fullMatchData = matchData0Return() + matchData1Return() + matchData2Return() +
-                                matchData3Return() + matchData4Return() + matchData5Return();
+                        String fullMatchData = matchDataReturn();
+                        if(teamStatsArr.size() >= 2){
+                            matchNum = teamStatsArr.get(1);
+
+                        }else {
+                            matchNum = "";
+                        }
+
                         try {
                             File sdcard = Environment.getExternalStorageDirectory();
                             File directory = new File(sdcard.getAbsolutePath());
                             directory.mkdirs();
-                            File file = new File(directory, "MatchData.csv");
+                            File file = new File(directory, "Match" + matchNum + "Data.csv");
                             FileOutputStream fou = new FileOutputStream(file);
                             try {
                                 fou.write(fullMatchData.getBytes());
@@ -190,7 +159,7 @@ public class MasterMenu extends AppCompatActivity {
             String teamData = scanResult.getContents();
 
             // String => array
-            teamStatsArr = new ArrayList<String>(); // has each value for a team
+
             int i = 0;
             while (i < teamData.length() - 1) {
                 int end = teamData.indexOf(",", i);
@@ -200,6 +169,7 @@ public class MasterMenu extends AppCompatActivity {
                 matchDataArray.add(matchDataIndexer, teamData);
                 matchDataIndexer = addOne(matchDataIndexer);
                 // TODO arrays storage
+
             }
         }
 
