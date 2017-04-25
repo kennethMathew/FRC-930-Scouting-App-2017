@@ -64,9 +64,9 @@
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/subtractFoulsTeleop"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="21dp"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:layout_marginBottom="18dp" />
+        android:layout_marginBottom="20dp" />
 
     <ImageView
         android:id="@+id/imageView22"
@@ -89,37 +89,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:srcCompat="@color/zxing_custom_viewfinder_laser"
         tools:ignore="ContentDescription"
-        tools:layout_constraintTop_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/subtractRoboErrorsTeleop"
-        android:layout_marginTop="172dp"
-        app:layout_constraintTop_toBottomOf="@+id/climbTime"
         android:layout_marginBottom="173dp" />
-
-    <EditText
-        android:id="@+id/climbTime"
-        android:layout_width="67dp"
-        android:layout_height="52dp"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:drawableTint="@android:color/holo_blue_dark"
-        android:ems="10"
-        android:hint="Climb Time"
-        android:inputType="number"
-        android:shadowColor="@android:color/holo_blue_dark"
-        android:textColorHighlight="@android:color/holo_blue_dark"
-        android:textColorLink="@android:color/holo_blue_dark"
-        android:textCursorDrawable="@android:color/holo_blue_dark"
-        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/addFoulsTeleop"
-        app:layout_constraintRight_toRightOf="@+id/foulsTeleop"
-        android:layout_marginTop="33dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="37dp"
-        app:layout_constraintTop_toTopOf="@+id/imageView22"
-        app:layout_constraintLeft_toRightOf="@+id/foulsTeleop" />
 
     <TextView
         android:id="@+id/humanErrorsTeleop"
@@ -155,8 +127,8 @@
         tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="5dp"
         app:layout_constraintTop_toTopOf="@+id/subtractFoulsTeleop"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/roboErrorsTeleop"
@@ -176,7 +148,8 @@
         android:layout_marginTop="17dp"
         app:layout_constraintTop_toBottomOf="@+id/humanErrorsTeleop"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="17dp" />
+        android:layout_marginBottom="17dp"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/techFoulsTeleop"
@@ -204,10 +177,8 @@
         tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginRight="16dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintVertical_bias="0.403"
-        android:layout_marginEnd="16dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/addHumanErrors" />
 
     <ImageButton
         android:id="@+id/addHumanErrors"
@@ -216,11 +187,8 @@
         android:tint="@android:color/holo_blue_dark"
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="ContentDescription,MissingConstraints"
-        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/addRoboErrorsTeleop"
-        app:layout_constraintRight_toRightOf="@+id/addRoboErrorsTeleop"
-        tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="17dp"
         app:layout_constraintLeft_toLeftOf="@+id/addRoboErrorsTeleop" />
 
@@ -245,32 +213,28 @@
         android:tint="@android:color/holo_blue_dark"
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded"
-        android:layout_marginRight="16dp"
-        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/addTechFoulsTeleop"
-        android:layout_marginEnd="16dp" />
+        app:layout_constraintRight_toRightOf="@+id/addTechFoulsTeleop"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/addTechFoulsTeleop" />
 
     <ImageButton
         android:id="@+id/subtractFoulsTeleop"
         android:layout_width="57dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="83dp"
         android:layout_marginEnd="2dp"
-        android:layout_marginTop="84dp"
         android:tint="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toTopOf="@+id/imageView21"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/textView"
         app:layout_constraintRight_toLeftOf="@+id/foulsTeleop"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/addFoulsTeleop"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
         tools:ignore="ContentDescription,MissingConstraints"
-        tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintRight_creator="1" />
 
     <ImageButton
         android:id="@+id/subtractRoboErrorsTeleop"
@@ -281,47 +245,34 @@
         android:contentDescription=""
         android:tint="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="@+id/goToPostMatch"
-        app:layout_constraintLeft_toLeftOf="@+id/subtractHumanErrors"
         app:layout_constraintRight_toRightOf="@+id/subtractHumanErrors"
         app:layout_constraintTop_toTopOf="@+id/humanErrorsTeleop"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
         tools:ignore="ContentDescription,MissingConstraints"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/subtractHumanErrors"
         android:layout_width="57dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginStart="6dp"
         android:tint="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toTopOf="@+id/subtractRoboErrorsTeleop"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/subtractTechFoulsTeleop"
-        app:layout_constraintRight_toRightOf="@+id/textView"
+        app:layout_constraintRight_toRightOf="@+id/subtractTechFoulsTeleop"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
         tools:ignore="ContentDescription,MissingConstraints"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        app:layout_constraintTop_toTopOf="@+id/addHumanErrors" />
 
     <ImageButton
         android:id="@+id/subtractTechFoulsTeleop"
         android:layout_width="57dp"
         android:layout_height="57dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
         android:tint="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addTechFoulsTeleop"
         app:layout_constraintVertical_bias="0.407"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
-        tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded" />
+        tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded"
+        app:layout_constraintRight_toRightOf="@+id/subtractFoulsTeleop" />
 
     <Switch
         android:id="@+id/climbYesNo"
@@ -332,11 +283,8 @@
         android:thumbTint="@android:color/darker_gray"
         android:trackTint="@android:color/darker_gray"
         tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
-        app:layout_constraintRight_toLeftOf="@+id/climbTime"
-        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
-        android:layout_marginEnd="37dp"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toRightOf="@+id/textView" />
 

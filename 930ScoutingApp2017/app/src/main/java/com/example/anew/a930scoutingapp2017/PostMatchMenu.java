@@ -46,11 +46,11 @@ public class PostMatchMenu extends AppCompatActivity {
                     public void onClick(View v) {
 
                         if (winLoss.isChecked()) {
-                            teamArray [24]= "1";
+                            teamArray [20]= "1";
                         } else {
-                            teamArray [24] = "0";
+                            teamArray [20] = "0";
                         }
-                        teamArray [25] = comments.getText().toString();
+                        teamArray [21] = comments.getText().toString();
 
                         Intent startActivityPostMatchMenu = new Intent(PostMatchMenu.this, QRStager.class);
                         startActivityPostMatchMenu.putExtra("PostMatchArray", teamArray);

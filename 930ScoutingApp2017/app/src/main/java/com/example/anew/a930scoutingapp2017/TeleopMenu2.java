@@ -19,7 +19,6 @@ public class TeleopMenu2 extends AppCompatActivity {
     Integer foulsTeleop, techFoulsTeleop, humanErrorsTeleop, roboErrorsTeleop;
     TextView numFoulsTeleop, numTechFoulsTeleop, numHumanErrorsTeleop, numRoboErrorsTeleop;
     Switch climbYesNo;
-    EditText climbTime;
     Intent teleop2Array;
     String [] teamArray;
     @Override
@@ -57,25 +56,25 @@ public class TeleopMenu2 extends AppCompatActivity {
         addRoboErrorsTeleop = (ImageButton) findViewById(R.id.addRoboErrorsTeleop);
         numRoboErrorsTeleop = (TextView)findViewById(R.id.roboErrorsTeleop);
 
-        climbTime = (EditText)findViewById(R.id.climbTime);
+
         climbYesNo = (Switch)findViewById(R.id.climbYesNo);
 
         goToPostMatch.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        teamArray [18] = Integer.toString(foulsTeleop);
-                        teamArray [19] = Integer.toString(techFoulsTeleop);
-                        teamArray [20] = Integer.toString(humanErrorsTeleop);
-                        teamArray [21] = Integer.toString(roboErrorsTeleop);
+                        teamArray [14] = Integer.toString(foulsTeleop);
+                        teamArray [15] = Integer.toString(techFoulsTeleop);
+                        teamArray [16] = Integer.toString(humanErrorsTeleop);
+                        teamArray [17] = Integer.toString(roboErrorsTeleop);
 
                         if (climbYesNo.isChecked()) {
-                            teamArray [22] = "1";
+                            teamArray [18] = "1";
                         } else {
-                            teamArray [22] = "0";
+                            teamArray [19] = "0";
                         }
 
-                        teamArray [23] = climbTime.getText().toString();
+
 
                         Intent startActivityTeleop2Menu = new Intent(TeleopMenu2.this, PostMatchMenu.class);
                         startActivityTeleop2Menu.putExtra("Teleop2Array", teamArray);

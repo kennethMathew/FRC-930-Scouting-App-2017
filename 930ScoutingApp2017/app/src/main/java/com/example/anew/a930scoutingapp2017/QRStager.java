@@ -41,8 +41,7 @@ public class QRStager extends AppCompatActivity {
                 teamArray [5] + "," + teamArray [6] + "," + teamArray [7] + "," + teamArray [8] + teamArray [9] + "," +
                 teamArray [10] + "," + teamArray [11] + "," + teamArray [12] + "," + teamArray [13] + "," + teamArray [14] + "," +
                 teamArray [15] + "," + teamArray [16] + "," + teamArray [17] + ","  + teamArray [18] + "," + teamArray [19] + "," +
-                teamArray [20] + "," + teamArray [21] + "," + teamArray [22] + "," + teamArray [23] + "," + teamArray [24] + "," +
-                teamArray [25] + ",";
+                teamArray [20] + "," + teamArray [21] + ",";
 
         onClickListenerQRStager();
     }

@@ -110,9 +110,9 @@ public class MasterMenu extends AppCompatActivity {
                     public void onClick(View v) {
                         fullMatchData = matchDataReturn();
                         dataLabels = "teamNum,matchNum,allianceColor,ballGoalAuton,gearStatusAuton,numBallsAuton,foulsAuton," +
-                                "techFoulsAuton,robotErrorsAuton,crossedBaseline,ballGoalTeleop,numBalls,numGears,numBallCycles," +
-                                "avgBallCycleTime,numGearCycles,avgGearCycleTime,foulsTeleop,techFoulsTeleop,humanErrorsTeleop," +
-                                "robotErrorsTeleop,climbYesNo,climbTime,winYesNo,comments\n";
+                                "techFoulsAuton,robotErrorsAuton,crossedBaseline,ballGoalTeleop,numBalls,numGears," +
+                                "foulsTeleop,techFoulsTeleop,humanErrorsTeleop,robotErrorsTeleop,climbYesNo,climbTime," +
+                                "winYesNo,comments\n";
 
                         if(teamStatsArr.size() >= 2){
                             matchNum = teamStatsArr.get(1);

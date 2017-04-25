@@ -35,7 +35,7 @@ public class PreMatchMenu extends AppCompatActivity {
         setContentView(R.layout.activity_pre_match_menu);
         greenAlliance = 0;
         view = this.getWindow().getDecorView();
-        teamArray = new String[26];
+        teamArray = new String[22];
         preMatchMenuRun();
     }
 
