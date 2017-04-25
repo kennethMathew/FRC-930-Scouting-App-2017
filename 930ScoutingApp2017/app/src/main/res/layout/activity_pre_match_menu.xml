@@ -29,7 +29,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778"
+        app:layout_constraintVertical_bias="0.64"
         app:srcCompat="@color/zxing_custom_viewfinder_laser"
         tools:ignore="ContentDescription"
         app:layout_constraintHorizontal_bias="0.0" />
@@ -57,7 +57,7 @@
         app:layout_constraintBottom_toTopOf="@+id/teamNum"
         android:layout_marginStart="16dp"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="46dp"
+        android:layout_marginBottom="33dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="16dp" />
 
@@ -91,9 +91,10 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription,HardcodedText"
+        tools:ignore="ContentDescription,HardcodedText,UnusedAttribute"
         app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginTop="13dp" />
+        android:layout_marginTop="17dp"
+        tools:targetApi="lollipop" />
 
     <EditText
         android:id="@+id/teamNum"
@@ -112,9 +113,9 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription,HardcodedText"
-        android:layout_marginTop="46dp"
-        app:layout_constraintHorizontal_bias="0.502" />
+        tools:ignore="ContentDescription,HardcodedText,UnusedAttribute"
+        android:layout_marginTop="33dp"
+        app:layout_constraintHorizontal_bias="0.503" />
 
     <Button
         android:id="@+id/startScouting"
@@ -132,29 +133,32 @@
 
     <TextView
         android:id="@+id/blueAlliance"
-        android:layout_width="138dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="BLUE"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="16dp"
+        android:text="              BLUE"
         app:layout_constraintBottom_toBottomOf="@+id/allianceSelector"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/allianceSelector"
         app:layout_constraintTop_toTopOf="@+id/allianceSelector"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText,RtlHardcoded"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
         android:id="@+id/redAlliance"
         android:layout_width="138dp"
         android:layout_height="0dp"
-        android:text="RED"
+        android:layout_marginLeft="0dp"
+        android:text="               RED"
         app:layout_constraintBottom_toBottomOf="@+id/allianceSelector"
         app:layout_constraintLeft_toRightOf="@+id/allianceSelector"
         app:layout_constraintTop_toTopOf="@+id/allianceSelector"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="HardcodedText"
+        tools:ignore="HardcodedText,RtlHardcoded"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
@@ -163,20 +167,17 @@
         android:id="@+id/allianceSelector"
         android:layout_width="76dp"
         android:layout_height="76dp"
-        android:layout_marginBottom="147dp"
-        android:layout_marginTop="147dp"
         android:splitTrack="false"
         android:thumbTint="@android:color/darker_gray"
         android:trackTint="@android:color/darker_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/matchNum"
-        tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginTop="21dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14"
+        tools:ignore="UnusedAttribute" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"

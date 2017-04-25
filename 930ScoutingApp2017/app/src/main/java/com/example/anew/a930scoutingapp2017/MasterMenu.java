@@ -24,12 +24,12 @@ import java.util.ArrayList;
 
 public class MasterMenu extends AppCompatActivity {
     Button backMasterMenu, scanCode, viewDatabase;
-    Intent masterFillArray;
     ArrayList<String> matchDataArray, teamStatsArr;
-    Integer matchDataIndexer;
+    Integer matchDataIndexer, teamDataIndexer;
     String allData, matchNum, dataLabels, fullMatchData;
     FileOutputStream fWriter;
     File findDir, directory, fileName;
+    String teamData0, teamData1, teamData2,teamData3,teamData4,teamData5;
 
     public Integer addOne(int baseValue) {
         baseValue = baseValue + 1;
@@ -39,30 +39,39 @@ public class MasterMenu extends AppCompatActivity {
     public String matchDataReturn() {
         if (matchDataArray.size() == 0){
             allData = "";
+            Toast.makeText(getApplicationContext(), "No Data", Toast.LENGTH_LONG).show();
 
         } else if(matchDataArray.size() == 1) {
             allData = matchDataArray.get(0) + "\n";
+            Toast.makeText(getApplicationContext(), "1 Team", Toast.LENGTH_LONG).show();
 
         }else if(matchDataArray.size() == 2) {
-            allData = matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n";
+            allData = matchDataArray.get(0) + "\n" + matchDataArray.get(1) + "\n";
+            Toast.makeText(getApplicationContext(), "2 Teams", Toast.LENGTH_LONG).show();
 
         }else if(matchDataArray.size() == 3) {
-            allData = matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n";
+            allData = matchDataArray.get(0) + "\n" + matchDataArray.get(1) + "\n" + matchDataArray.get(2) + "\n";
+            Toast.makeText(getApplicationContext(), "3 Teams", Toast.LENGTH_LONG).show();
 
         }else if(matchDataArray.size() == 4) {
-            allData = matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" +
-                    matchDataArray.get(0) + "\n";
+            allData = matchDataArray.get(0) + "\n" + matchDataArray.get(1) + "\n" + matchDataArray.get(2) + "\n" +
+                    matchDataArray.get(3) + "\n";
+            Toast.makeText(getApplicationContext(), "4 Teams", Toast.LENGTH_LONG).show();
 
         }else if(matchDataArray.size() == 5) {
-            allData = matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" +
-                    matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n";
+            allData = matchDataArray.get(0) + "\n" + matchDataArray.get(1) + "\n" + matchDataArray.get(2) + "\n" +
+                    matchDataArray.get(3) + "\n" + matchDataArray.get(4) + "\n";
+            Toast.makeText(getApplicationContext(), "5 Teams", Toast.LENGTH_LONG).show();
+
         }else {
-            allData = matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" +
-                    matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n" + matchDataArray.get(0) + "\n";
+            allData = matchDataArray.get(0) + "\n" + matchDataArray.get(1) + "\n" + matchDataArray.get(2) + "\n" +
+                    matchDataArray.get(3) + "\n" + matchDataArray.get(4) + "\n" + matchDataArray.get(5) + "\n";
+            Toast.makeText(getApplicationContext(), "6 data", Toast.LENGTH_LONG).show();
+
         }
+
         return allData;
     }
-
 
 
     @Override
@@ -72,6 +81,7 @@ public class MasterMenu extends AppCompatActivity {
         matchDataArray = new ArrayList<String>();
         teamStatsArr = new ArrayList<String>();
         matchDataIndexer = 0;
+        teamDataIndexer = 0;
         masterMenuRun();
 
     }
@@ -151,25 +161,25 @@ public class MasterMenu extends AppCompatActivity {
         IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (scanResult != null) {
             // handle scan result
-            String teamData = scanResult.getContents();
+            matchDataArray.add(matchDataIndexer, scanResult.getContents());
 
             // String => array
 
-            Toast.makeText(getApplicationContext(), "Pizza", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), matchDataArray.get(matchDataIndexer), Toast.LENGTH_LONG).show();
+            if(matchDataIndexer == 0){
+                int i = 0;
+                while (i < matchDataArray.get(matchDataIndexer).length() - 1) {
+                    int end = matchDataArray.get(matchDataIndexer).indexOf(",", i);
+                    teamStatsArr.add(matchDataArray.get(matchDataIndexer).substring(i, end));
+                    i = end + 1;
+                }
+            }
 
-           /* int i = 0;
-            while (i < teamData.length() - 1) {
-                int end = teamData.indexOf(",", i);
-                teamStatsArr.add(teamData.substring(i, end));
-                i = end + 1;
-
-                matchDataArray.add(matchDataIndexer, teamData);
-                matchDataIndexer = addOne(matchDataIndexer);
                 // TODO arrays storage
 
 
-            }*/
-        }
 
+        }
+        matchDataIndexer = addOne(matchDataIndexer);
     }
 }

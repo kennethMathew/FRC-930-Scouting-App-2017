@@ -55,13 +55,13 @@ public class AutonMenu2 extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        teamArray [6] = numFoulsAuton.toString();
+                        teamArray [6] = numFouls.toString();
 
 
-                        teamArray [7] = numTechFoulsAuton.toString();
+                        teamArray [7] = numTechFouls.toString();
 
 
-                        teamArray [8] = numRoboErrorsAuton.toString();
+                        teamArray [8] = numRoboErrors.toString();
 
 
                         if (crossBaseline.isChecked()) {

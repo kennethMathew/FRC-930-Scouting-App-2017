@@ -52,7 +52,7 @@ public class PostMatchMenu extends AppCompatActivity {
                         }
                         teamArray [25] = comments.getText().toString();
 
-                        Intent startActivityPostMatchMenu = new Intent(PostMatchMenu.this, ScouterMenu.class);
+                        Intent startActivityPostMatchMenu = new Intent(PostMatchMenu.this, QRStager.class);
                         startActivityPostMatchMenu.putExtra("PostMatchArray", teamArray);
                         startActivity(startActivityPostMatchMenu);
 

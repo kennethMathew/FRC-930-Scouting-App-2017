@@ -81,7 +81,7 @@ public class TeleopMenu extends AppCompatActivity {
                     public void onClick(View v) {
                         ballStatus = ballGroupTeleop.getCheckedRadioButtonId();
                         ballRadioButtonTeleop = (RadioButton)findViewById(ballStatus);
-                        teamArray [11] = ballGroupTeleop.toString();
+                        teamArray [11] = ballRadioButtonTeleop.getText().toString();
 
                         teamArray [12] = Integer.toString(ballsTeleop);
 

@@ -64,14 +64,16 @@ public class AutonMenu extends AppCompatActivity {
                         ballStatus = ballGroupAuton.getCheckedRadioButtonId();
                         ballRadioButtonAuton = (RadioButton)findViewById(ballStatus);
 
-                        teamArray [3] = ballGroupAuton.toString();
+                        teamArray [3] = ballRadioButtonAuton.getText().toString();
 
                         gearStatus = gearGroupAuton.getCheckedRadioButtonId();
                         gearRadioButtonAuton = (RadioButton)findViewById(gearStatus);
 
-                        teamArray [4] = gearGroupAuton.toString();
+                        teamArray [4] = gearRadioButtonAuton.getText().toString();
 
                         teamArray [5] =  Integer.toString(numBallsAuton);
+
+
 
                         startActivityAutonMenu = new Intent(AutonMenu.this, AutonMenu2.class);
                         startActivityAutonMenu.putExtra("AutonArray", teamArray);

@@ -24,6 +24,8 @@ import com.google.zxing.WriterException;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.common.BitMatrix;
 
+import java.util.ArrayList;
+
 public class QRStager extends AppCompatActivity {
     Button backQRStager, genQRCode, mainMenu;
     Intent inputData;
@@ -34,8 +36,13 @@ public class QRStager extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrstager);
         inputData = getIntent();
-        // teamArray = inputData.getStringArrayExtra("PostMatchArray");
-        set = "PIZZAAAA";
+        teamArray = inputData.getStringArrayExtra("PostMatchArray");
+        set = teamArray [0] + "," + teamArray [1] + "," + teamArray [2] + "," + teamArray [3] + "," + teamArray [4] + "," +
+                teamArray [5] + "," + teamArray [6] + "," + teamArray [7] + "," + teamArray [8] + teamArray [9] + "," +
+                teamArray [10] + "," + teamArray [11] + "," + teamArray [12] + "," + teamArray [13] + "," + teamArray [14] + "," +
+                teamArray [15] + "," + teamArray [16] + "," + teamArray [17] + ","  + teamArray [18] + "," + teamArray [19] + "," +
+                teamArray [20] + "," + teamArray [21] + "," + teamArray [22] + "," + teamArray [23] + "," + teamArray [24] + "," +
+                teamArray [25] + ",";
 
         onClickListenerQRStager();
     }

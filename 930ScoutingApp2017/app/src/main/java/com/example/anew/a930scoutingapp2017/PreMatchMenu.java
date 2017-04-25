@@ -105,7 +105,9 @@ public class PreMatchMenu extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     redAlliance.setBackgroundColor(Color.parseColor("#FF0000"));
-                    redAlliance.setTextSize(25);
+                    redAlliance.setTextSize(40);
+                    redAlliance.setText("  RED");
+                    blueAlliance.setText(" BLUE");
                     blueAlliance.setBackgroundColor(Color.parseColor("#FF0000"));
                     allianceSelector.setBackgroundColor(Color.parseColor("#FF0000"));
                     greenAlliance = addOne(greenAlliance);
@@ -119,7 +121,7 @@ public class PreMatchMenu extends AppCompatActivity {
 
                 }else{
                     blueAlliance.setBackgroundColor(Color.parseColor("#0000ff"));
-                    blueAlliance.setTextSize(25);
+                    blueAlliance.setTextSize(40);
                     redAlliance.setBackgroundColor(Color.parseColor("#0000ff"));
                     allianceSelector.setBackgroundColor(Color.parseColor("#0000ff"));
                     greenAlliance = addOne(greenAlliance);
