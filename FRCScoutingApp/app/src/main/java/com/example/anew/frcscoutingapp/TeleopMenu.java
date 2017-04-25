@@ -83,13 +83,9 @@ public class TeleopMenu extends AppCompatActivity {
                         ballRadioButtonTeleop = (RadioButton)findViewById(ballStatus);
                         teamArray [11] = ballGroupTeleop.toString();
 
-
                         teamArray [12] = Integer.toString(ballsTeleop);
 
-
                         teamArray [13] = Integer.toString(gearsTeleop);
-
-
 
                         indexStandard = ballCycleTimes.length;
                         if(indexStandard != 0) {
@@ -114,7 +110,6 @@ public class TeleopMenu extends AppCompatActivity {
                             avgGearTime = gearTime / indexStandard;
 
                             teamArray [16] = Integer.toString(indexStandard);
-
 
                             teamArray [17] = Integer.toString(avgGearTime);
                            }

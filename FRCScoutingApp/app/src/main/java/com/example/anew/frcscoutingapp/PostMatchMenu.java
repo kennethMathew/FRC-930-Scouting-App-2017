@@ -49,9 +49,9 @@ public class PostMatchMenu extends AppCompatActivity {
                     public void onClick(View v) {
 
                         if (winLoss.isChecked()) {
-                            teamArray [24]= "LOOOOOOOOOSERRRRR";
+                            teamArray [24]= "1";
                         } else {
-                            teamArray [24] = "930";
+                            teamArray [24] = "0";
                         }
                         teamArray [25] = comments.getText().toString();
 

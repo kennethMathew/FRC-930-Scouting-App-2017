@@ -1,17 +1,11 @@
 package com.example.anew.frcscoutingapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Environment;
-import android.provider.SyncStateContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
@@ -21,26 +15,21 @@ import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.integration.android.IntentIntegrator;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 public class MasterMenu extends AppCompatActivity {
     Button backMasterMenu, scanCode, viewDatabase;
     Intent masterFillArray;
     ArrayList<String> matchDataArray, teamStatsArr;
-    FileWriter fwriter;
     Integer matchDataIndexer;
-    String allData, matchNum;
+    String allData, matchNum, dataLabels, fullMatchData;
+    FileOutputStream fWriter;
+    File findDir, directory, fileName;
 
     public Integer addOne(int baseValue) {
         baseValue = baseValue + 1;
@@ -109,7 +98,12 @@ public class MasterMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String fullMatchData = matchDataReturn();
+                        fullMatchData = matchDataReturn();
+                        dataLabels = "teamNum,matchNum,allianceColor,ballGoalAuton,gearStatusAuton,numBallsAuton,foulsAuton," +
+                                "techFoulsAuton,robotErrorsAuton,crossedBaseline,ballGoalTeleop,numBalls,numGears,numBallCycles," +
+                                "avgBallCycleTime,numGearCycles,avgGearCycleTime,foulsTeleop,techFoulsTeleop,humanErrorsTeleop," +
+                                "robotErrorsTeleop,climbYesNo,climbTime,winYesNo,comments\n";
+
                         if(teamStatsArr.size() >= 2){
                             matchNum = teamStatsArr.get(1);
 
@@ -118,16 +112,17 @@ public class MasterMenu extends AppCompatActivity {
                         }
 
                         try {
-                            File sdcard = Environment.getExternalStorageDirectory();
-                            File directory = new File(sdcard.getAbsolutePath());
+                            findDir = Environment.getExternalStorageDirectory();
+                            directory = new File(findDir.getAbsolutePath());
                             directory.mkdirs();
-                            File file = new File(directory, "Match" + matchNum + "Data.csv");
-                            FileOutputStream fou = new FileOutputStream(file);
+                            fileName = new File(directory, "Match" + matchNum + "Data.csv");
+                            fWriter = new FileOutputStream(fileName);
                             try {
-                                fou.write(fullMatchData.getBytes());
-                                fou.flush();
-                                fou.close();
-                                Toast.makeText(getBaseContext(), "Data saved", Toast.LENGTH_LONG).show();
+                                fWriter.write(dataLabels.getBytes());
+                                fWriter.write(fullMatchData.getBytes());
+                                fWriter.flush();
+                                fWriter.close();
+                                Toast.makeText(getBaseContext(), "[Match" + matchNum + "Data.csv] successfully created", Toast.LENGTH_LONG).show();
                             } catch (IOException e) {
                                 // TODO Auto-generated catch block
                                 e.printStackTrace();
@@ -160,6 +155,8 @@ public class MasterMenu extends AppCompatActivity {
 
             // String => array
 
+            Toast.makeText(getApplicationContext(), teamData, Toast.LENGTH_LONG).show();
+
             int i = 0;
             while (i < teamData.length() - 1) {
                 int end = teamData.indexOf(",", i);
@@ -169,6 +166,7 @@ public class MasterMenu extends AppCompatActivity {
                 matchDataArray.add(matchDataIndexer, teamData);
                 matchDataIndexer = addOne(matchDataIndexer);
                 // TODO arrays storage
+
 
             }
         }

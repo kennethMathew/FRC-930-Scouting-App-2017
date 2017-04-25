@@ -65,10 +65,10 @@ public class AutonMenu2 extends AppCompatActivity {
 
 
                         if (crossBaseline.isChecked()) {
-                            teamArray [9] = "fo'shizzle";
+                            teamArray [9] = "1";
 
                         } else {
-                            teamArray [10] =  "no deal home zlice";
+                            teamArray [10] =  "0";
 
                         }
 

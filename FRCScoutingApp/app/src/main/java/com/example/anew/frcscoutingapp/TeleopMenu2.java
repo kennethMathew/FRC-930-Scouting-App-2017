@@ -16,7 +16,7 @@ import android.widget.ToggleButton;
 public class TeleopMenu2 extends AppCompatActivity {
     Button goToPostMatch;
     ImageButton subtractFoulsTeleop, addFoulsTeleop, subtractTechFoulsTeleop, addTechFoulsTeleop, subtractHumanErrors, addHumanErrors, subtractRoboErrorsTeleop, addRoboErrorsTeleop;
-    Integer foulsTeleop, techFoulsTeleop, humanErrors, roboErrorsTeleop;
+    Integer foulsTeleop, techFoulsTeleop, humanErrorsTeleop, roboErrorsTeleop;
     TextView numFoulsTeleop, numTechFoulsTeleop, numHumanErrorsTeleop, numRoboErrorsTeleop;
     Switch climbYesNo;
     EditText climbTime;
@@ -28,7 +28,7 @@ public class TeleopMenu2 extends AppCompatActivity {
         setContentView(R.layout.activity_teleop_menu2);
         foulsTeleop = 0;
         techFoulsTeleop = 0;
-        humanErrors = 0;
+        humanErrorsTeleop = 0;
         roboErrorsTeleop = 0;
         teleop2Array = getIntent();
         teamArray = teleop2Array.getStringArrayExtra("TeleopArray");
@@ -66,13 +66,13 @@ public class TeleopMenu2 extends AppCompatActivity {
                     public void onClick(View v) {
                         teamArray [18] = Integer.toString(foulsTeleop);
                         teamArray [19] = Integer.toString(techFoulsTeleop);
-                        teamArray [20] = Integer.toString(humanErrors);
+                        teamArray [20] = Integer.toString(humanErrorsTeleop);
                         teamArray [21] = Integer.toString(roboErrorsTeleop);
 
                         if (climbYesNo.isChecked()) {
-                            teamArray [22] = "fo'shizzle";
+                            teamArray [22] = "1";
                         } else {
-                            teamArray [22] = "no deal home zlice";
+                            teamArray [22] = "0";
                         }
 
                         teamArray [23] = climbTime.getText().toString();
@@ -137,9 +137,9 @@ public class TeleopMenu2 extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        humanErrors = humanErrors - 1;
+                        humanErrorsTeleop = humanErrorsTeleop - 1;
                         numHumanErrorsTeleop.setTextSize(25);
-                        numHumanErrorsTeleop.setText("   # H Errors: " + Integer.toString(humanErrors));
+                        numHumanErrorsTeleop.setText("   # H Errors: " + Integer.toString(humanErrorsTeleop));
                     }
                 }
 
@@ -148,9 +148,9 @@ public class TeleopMenu2 extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        humanErrors = humanErrors + 1;
+                        humanErrorsTeleop = humanErrorsTeleop + 1;
                         numHumanErrorsTeleop.setTextSize(25);
-                        numHumanErrorsTeleop.setText("   # H Errors: " + Integer.toString(humanErrors));
+                        numHumanErrorsTeleop.setText("   # H Errors: " + Integer.toString(humanErrorsTeleop));
                     }
                 }
 
