@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class ScouterMenu extends AppCompatActivity {
     Button startMatch, genQR, backScouterMenu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,11 +16,12 @@ public class ScouterMenu extends AppCompatActivity {
         onClickListenerScouterMenu();
 
     }
+
     public void onClickListenerScouterMenu() {
 
-        startMatch = (Button)findViewById(R.id.startScouting);
-        genQR = (Button)findViewById(R.id.viewDatabase);
-        backScouterMenu = (Button)findViewById(R.id.backScouterMenu);
+        startMatch = (Button) findViewById(R.id.startScouting);
+        genQR = (Button) findViewById(R.id.viewDatabase);
+        backScouterMenu = (Button) findViewById(R.id.backScouterMenu);
 
         startMatch.setOnClickListener(
                 new View.OnClickListener() {
@@ -56,3 +58,4 @@ public class ScouterMenu extends AppCompatActivity {
         );
 
     }
+}

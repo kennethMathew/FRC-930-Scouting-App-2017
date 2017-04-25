@@ -26,7 +26,8 @@
         <activity android:name=".QRStager" />
         <activity android:name=".ScouterMenu" />
         <activity android:name=".TeleopMenu" />
-        <activity android:name=".TeleopMenu2"></activity>
+        <activity android:name=".TeleopMenu2" />
+        <activity android:name=".SettingsMenu"></activity>
     </application>
 
 </manifest>

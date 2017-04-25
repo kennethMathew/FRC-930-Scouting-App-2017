@@ -11,9 +11,6 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
-
-import static com.example.anew.frcscoutingapp.R.id.redAlliance;
-
 public class PostMatchMenu extends AppCompatActivity {
     Button submitMatchData;
     TextView loss, win;
