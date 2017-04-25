@@ -78,7 +78,6 @@
         android:id="@+id/matchNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:contentDescription="Team Number"
         android:drawableTint="@android:color/holo_blue_dark"
@@ -93,7 +92,8 @@
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1"
         tools:ignore="ContentDescription,HardcodedText"
-        app:layout_constraintHorizontal_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="13dp" />
 
     <EditText
         android:id="@+id/teamNum"

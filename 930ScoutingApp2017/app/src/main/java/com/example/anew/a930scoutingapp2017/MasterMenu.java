@@ -155,9 +155,9 @@ public class MasterMenu extends AppCompatActivity {
 
             // String => array
 
-            Toast.makeText(getApplicationContext(), teamData, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Pizza", Toast.LENGTH_LONG).show();
 
-            int i = 0;
+           /* int i = 0;
             while (i < teamData.length() - 1) {
                 int end = teamData.indexOf(",", i);
                 teamStatsArr.add(teamData.substring(i, end));
@@ -168,7 +168,7 @@ public class MasterMenu extends AppCompatActivity {
                 // TODO arrays storage
 
 
-            }
+            }*/
         }
 
     }
