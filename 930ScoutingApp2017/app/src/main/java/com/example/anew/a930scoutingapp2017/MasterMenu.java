@@ -122,7 +122,7 @@ public class MasterMenu extends AppCompatActivity {
 
                         try {
                             findDir = Environment.getExternalStorageDirectory();
-                            directory = new File(findDir.getAbsolutePath());
+                            directory = new File(findDir.getAbsolutePath() + "/Download");
                             directory.mkdirs();
                             fileName = new File(directory, "Match" + matchNum + "Data.csv");
                             fWriter = new FileOutputStream(fileName);

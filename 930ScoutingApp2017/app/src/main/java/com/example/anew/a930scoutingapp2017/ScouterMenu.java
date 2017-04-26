@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class ScouterMenu extends AppCompatActivity {
-    Button startMatch, genQR, backScouterMenu;
+    Button startMatch, backScouterMenu;
     String [] teamArray;
     Intent scouterArray;
 
@@ -24,7 +24,7 @@ public class ScouterMenu extends AppCompatActivity {
     public void onClickListenerScouterMenu() {
 
         startMatch = (Button) findViewById(R.id.startScouting);
-        genQR = (Button) findViewById(R.id.viewDatabase);
+
         backScouterMenu = (Button) findViewById(R.id.backScouterMenu);
 
         startMatch.setOnClickListener(
@@ -33,18 +33,6 @@ public class ScouterMenu extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent intent = new Intent(ScouterMenu.this, PreMatchMenu.class);
                         startActivity(intent);
-
-                    }
-                }
-
-        );
-        genQR.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent startActivityScouterMenu = new Intent(ScouterMenu.this, QRStager.class);
-                        startActivityScouterMenu.putExtra("ScouterArray", teamArray);
-                        startActivity(startActivityScouterMenu);
 
                     }
                 }
