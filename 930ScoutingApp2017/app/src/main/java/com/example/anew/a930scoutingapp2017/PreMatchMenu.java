@@ -58,16 +58,9 @@ public class PreMatchMenu extends AppCompatActivity {
                     public void onClick(View v) {
                         teamArray [0] = teamNum.getText().toString();
 
-
                         teamArray [1] = matchNum.getText().toString();
 
-                        if(allianceSelector.isChecked()){
-                            teamArray [2] = "Red";
 
-                        } else {
-                            teamArray [2] = "Blue";
-
-                        }
                         Intent startActivityPreMatchMenu = new Intent(PreMatchMenu.this, AutonMenu.class);
                         startActivityPreMatchMenu.putExtra("PreMatchArray", teamArray);
                         startActivity(startActivityPreMatchMenu);

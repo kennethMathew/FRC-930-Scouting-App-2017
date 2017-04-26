@@ -109,10 +109,9 @@ public class MasterMenu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         fullMatchData = matchDataReturn();
-                        dataLabels = "teamNum,matchNum,allianceColor,ballGoalAuton,gearStatusAuton,numBallsAuton,foulsAuton," +
-                                "techFoulsAuton,robotErrorsAuton,crossedBaseline,ballGoalTeleop,numBalls,numGears," +
-                                "foulsTeleop,techFoulsTeleop,humanErrorsTeleop,robotErrorsTeleop,climbYesNo,climbTime," +
-                                "winYesNo,comments\n";
+                        dataLabels = "teamNum,matchNum,crossedBaseline,gearsAuton,fuelLowAuton,fuelHighAuton," +
+                                "gearsTeleop,fuelLowTeleop,fuelHighTeleop,climbYesNo,disabled,techFouls," +
+                                "yellowCards,comments\n";
 
                         if(teamStatsArr.size() >= 2){
                             matchNum = teamStatsArr.get(1);
@@ -165,21 +164,18 @@ public class MasterMenu extends AppCompatActivity {
 
             // String => array
 
-            Toast.makeText(getApplicationContext(), matchDataArray.get(matchDataIndexer), Toast.LENGTH_LONG).show();
-            if(matchDataIndexer == 0){
-                int i = 0;
-                while (i < matchDataArray.get(matchDataIndexer).length() - 1) {
-                    int end = matchDataArray.get(matchDataIndexer).indexOf(",", i);
-                    teamStatsArr.add(matchDataArray.get(matchDataIndexer).substring(i, end));
-                    i = end + 1;
-                }
+            Toast.makeText(getApplicationContext(), "Data Saved", Toast.LENGTH_LONG).show();
+           /*if(matchDataIndexer == 0){
+               int i = 0;
+              while (i < matchDataArray.get(0).length() - 1) {
+                  int end = matchDataArray.get(0).indexOf(",", i);
+                  //teamStatsArr.add(matchDataArray.get(0).substring(i, end));
+                   // i = end + 1;
+               }
             }
-
                 // TODO arrays storage
-
-
-
+                matchDataIndexer = addOne(matchDataIndexer); */
         }
-        matchDataIndexer = addOne(matchDataIndexer);
+
     }
 }

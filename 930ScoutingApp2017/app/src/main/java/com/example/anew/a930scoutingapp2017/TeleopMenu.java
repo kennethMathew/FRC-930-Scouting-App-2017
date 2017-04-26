@@ -20,9 +20,9 @@ import java.util.Timer;
 public class TeleopMenu extends AppCompatActivity {
     Button goToTeleop2;
     ImageButton subtractBallsTeleop, addBallsTeleop, subtractGearsTeleop, addGearsTeleop;
-    Integer ballsTeleop, gearsTeleop, ballStatus, gearTime;
+    Integer ballsTeleop, gearsTeleop;
     TextView numBallsTeleop, numGearsTeleop;
-    RadioButton ballRadioButtonTeleop;
+    RadioButton ballLowGoalTeleop, ballHighGoalTeleop;
     RadioGroup ballGroupTeleop;
     Intent teleopArray;
     String [] teamArray;
@@ -39,7 +39,6 @@ public class TeleopMenu extends AppCompatActivity {
         setContentView(R.layout.activity_teleop_menu);
         ballsTeleop = 0;
         gearsTeleop = 0;
-        gearTime = 0;
         teleopArray = getIntent();
         teamArray = teleopArray.getStringArrayExtra("Auton2Array");
         TeleopMenu();
@@ -60,19 +59,28 @@ public class TeleopMenu extends AppCompatActivity {
         numGearsTeleop = (TextView) findViewById(R.id.gearsTeleop);
 
         ballGroupTeleop = (RadioGroup) findViewById(R.id.ballGroupTeleop);
-        ballRadioButtonTeleop = (RadioButton) findViewById(R.id.highGoalTeleop);
+        ballHighGoalTeleop = (RadioButton) findViewById(R.id.highGoalTeleop);
+        ballLowGoalTeleop = (RadioButton) findViewById(R.id.lowGoalTeleop);
 
         goToTeleop2.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        ballStatus = ballGroupTeleop.getCheckedRadioButtonId();
-                        ballRadioButtonTeleop = (RadioButton)findViewById(ballStatus);
-                        teamArray [11] = ballRadioButtonTeleop.getText().toString();
+                        if(ballLowGoalTeleop.isChecked()){
+                            teamArray [7] = Integer.toString(ballsTeleop);
+                            teamArray [8] = "0";
+                        } else if(ballHighGoalTeleop.isChecked()){
+                            teamArray [7] = "0";
+                            teamArray [8] = Integer.toString(ballsTeleop);
 
-                        teamArray [12] = Integer.toString(ballsTeleop);
+                        } else{
+                            teamArray [7] = "0";
+                            teamArray [8] = "0";
+                        }
 
-                        teamArray [13] = Integer.toString(gearsTeleop);
+
+
+                        teamArray [6] = Integer.toString(gearsTeleop);
 
 
 

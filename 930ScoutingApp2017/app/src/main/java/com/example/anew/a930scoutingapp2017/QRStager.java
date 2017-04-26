@@ -38,16 +38,12 @@ public class QRStager extends AppCompatActivity {
         inputData = getIntent();
         teamArray = inputData.getStringArrayExtra("PostMatchArray");
         set = teamArray [0] + "," + teamArray [1] + "," + teamArray [2] + "," + teamArray [3] + "," + teamArray [4] + "," +
-                teamArray [5] + "," + teamArray [6] + "," + teamArray [7] + "," + teamArray [8] + teamArray [9] + "," +
-                teamArray [10] + "," + teamArray [11] + "," + teamArray [12] + "," + teamArray [13] + "," + teamArray [14] + "," +
-                teamArray [15] + "," + teamArray [16] + "," + teamArray [17] + ","  + teamArray [18] + "," + teamArray [19] + "," +
-                teamArray [20] + "," + teamArray [21] + ",";
+                teamArray [5] + "," + teamArray [6] + "," + teamArray [7] + "," + teamArray [8] + "," + teamArray [9] + "," +
+                teamArray [10] + "," + teamArray [11] + "," + teamArray [12] + "," + teamArray [15];
 
         onClickListenerQRStager();
     }
     public void onClickListenerQRStager() {
-
-        Toast.makeText(getApplicationContext(), "U made it THIS FAR PAUL", Toast.LENGTH_LONG).show();
 
         backQRStager = (Button) findViewById(R.id.backQRStager);
         genQRCode = (Button) findViewById(R.id.genQRCode);
@@ -57,8 +53,6 @@ public class QRStager extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(getApplicationContext(), "Hit this Button 1 more time", Toast.LENGTH_LONG).show();
-
 
                         // Generate QR
                         QRCodeWriter writer = new QRCodeWriter();
@@ -73,7 +67,6 @@ public class QRStager extends AppCompatActivity {
                                 }
                             }
                             ((ImageView) findViewById(R.id.img_result_qr)).setImageBitmap(bmp);
-                            Toast.makeText(getApplicationContext(), "U fail", Toast.LENGTH_LONG).show();
                         }
                         catch (WriterException e) {
                             e.printStackTrace();
@@ -86,6 +79,7 @@ public class QRStager extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
                         Intent intent = new Intent(QRStager.this, ScouterMenu.class);
                         startActivity(intent);
                     }

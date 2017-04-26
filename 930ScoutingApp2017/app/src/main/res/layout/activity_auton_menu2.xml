@@ -23,20 +23,6 @@
         app:layout_constraintLeft_toLeftOf="@+id/imageView10" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:srcCompat="@color/zxing_custom_viewfinder_laser"
-        tools:ignore="ContentDescription"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/imageView6"
-        android:layout_marginTop="254dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView6" />
-
-    <ImageView
         android:id="@+id/imageView7"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -44,11 +30,9 @@
         tools:ignore="ContentDescription"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/imageView5"
-        android:layout_marginTop="134dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView5" />
+        tools:layout_editor_absoluteY="575dp"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -95,24 +79,6 @@
         android:layout_marginBottom="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="0dp"
-        android:layout_height="7dp"
-        app:srcCompat="@color/zxing_custom_viewfinder_laser"
-        tools:ignore="ContentDescription,RtlHardcoded"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        android:layout_marginTop="114dp"
-        android:layout_marginBottom="114dp"
-        app:layout_constraintTop_toTopOf="@+id/subtractRoboErrorsAuton"
-        app:layout_constraintVertical_bias="0.125"
-        app:layout_constraintRight_toRightOf="@+id/imageView12"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -162,24 +128,22 @@
         android:id="@+id/foulsAuton"
         android:layout_width="0dp"
         android:layout_height="62dp"
+        android:layout_marginBottom="62dp"
         android:layout_marginEnd="18dp"
         android:layout_marginStart="18dp"
-        android:text="# of Fouls: 0"
+        android:layout_marginTop="62dp"
+        android:text="# of Y Cards: 0"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@android:color/darker_gray"
         android:textSize="24sp"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/techFoulsAuton"
         app:layout_constraintLeft_toLeftOf="@+id/techFoulsAuton"
-        app:layout_constraintRight_toRightOf="@+id/robotErrorsAuton"
+        app:layout_constraintTop_toBottomOf="@+id/crossBaseline"
         tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        app:layout_constraintBottom_toBottomOf="@+id/techFoulsAuton"
-        android:layout_marginTop="62dp"
-        app:layout_constraintTop_toBottomOf="@+id/crossBaseline"
-        android:layout_marginBottom="62dp" />
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
         android:id="@+id/techFoulsAuton"
@@ -202,27 +166,6 @@
         android:layout_marginBottom="15dp"
         app:layout_constraintTop_toTopOf="@+id/addTechFoulsAuton" />
 
-    <TextView
-        android:id="@+id/robotErrorsAuton"
-        android:layout_width="235dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="27dp"
-        android:text="# of R Errors: 0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="24sp"
-        tools:ignore="HardcodedText,MissingConstraints"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
-        app:layout_constraintRight_toRightOf="@+id/addRoboErrorsAuton"
-        android:layout_marginTop="52dp"
-        app:layout_constraintTop_toBottomOf="@+id/techFoulsAuton"
-        android:layout_marginBottom="54dp"
-        android:layout_marginRight="27dp"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
         android:id="@+id/goToTeleop"
         android:layout_width="wrap_content"
@@ -236,41 +179,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintRight_creator="1" />
-
-    <ImageButton
-        android:id="@+id/addRoboErrorsAuton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:tint="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toBottomOf="@+id/subtractRoboErrorsAuton"
-        app:layout_constraintRight_toRightOf="@+id/addTechFoulsAuton"
-        app:layout_constraintTop_toTopOf="@+id/robotErrorsAuton"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@android:drawable/ic_input_add"
-        tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginRight="3dp"
-        android:layout_marginEnd="3dp" />
-
-    <ImageButton
-        android:id="@+id/subtractRoboErrorsAuton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="30dp"
-        android:tint="@android:color/holo_blue_dark"
-        app:srcCompat="@android:drawable/button_onoff_indicator_on"
-        tools:ignore="ContentDescription,MissingConstraints"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toLeftOf="@+id/robotErrorsAuton"
-        android:layout_marginTop="61dp"
-        app:layout_constraintTop_toBottomOf="@+id/subtractTechFoulsAuton"
-        android:layout_marginLeft="23dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
-        android:layout_marginStart="23dp"
-        tools:layout_constraintLeft_creator="1" />
 
     <ImageButton
         android:id="@+id/addFoulsAuton"
@@ -325,11 +233,11 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:tint="@android:color/holo_blue_dark"
-        app:layout_constraintLeft_toLeftOf="@+id/subtractRoboErrorsAuton"
         app:layout_constraintTop_toBottomOf="@+id/subtractFoulsAuton"
         app:srcCompat="@android:drawable/button_onoff_indicator_on"
         tools:ignore="ContentDescription,MissingConstraints"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteX="23dp" />
 
     <CheckBox
         android:id="@+id/crossBaseline"

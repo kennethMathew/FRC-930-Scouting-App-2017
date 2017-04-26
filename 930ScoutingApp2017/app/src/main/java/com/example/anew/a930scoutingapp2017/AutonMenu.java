@@ -19,7 +19,7 @@ public class AutonMenu extends AppCompatActivity {
     Button goToAuton2;
     ImageButton addBallsAuton, subtractBallsAuton;
     Integer numBallsAuton, gearStatus, ballStatus;
-    RadioButton ballRadioButtonAuton, gearRadioButtonAuton;
+    RadioButton ballLowGoalAuton, ballHighGoalAuton, gearScoredAuton;
     RadioGroup ballGroupAuton, gearGroupAuton;
     TextView ballsAuton;
     String [] teamArray;
@@ -50,10 +50,11 @@ public class AutonMenu extends AppCompatActivity {
         subtractBallsAuton = (ImageButton) findViewById(R.id.subtractBallsAuton);
 
         ballGroupAuton = (RadioGroup) findViewById(R.id.ballGroupAuton);
-        ballRadioButtonAuton = (RadioButton) findViewById(R.id.lowGoalAuton);
+        ballLowGoalAuton = (RadioButton) findViewById(R.id.lowGoalAuton);
+        ballHighGoalAuton = (RadioButton) findViewById(R.id.highGoalAuton);
 
         gearGroupAuton = (RadioGroup) findViewById(R.id.gearGroupAuton);
-        gearRadioButtonAuton = (RadioButton) findViewById(R.id.notScoredGearsAuton);
+        gearScoredAuton = (RadioButton) findViewById(R.id.scoredGearsAuton);
 
         ballsAuton = (TextView) findViewById(R.id.ballsAuton);
 
@@ -61,15 +62,24 @@ public class AutonMenu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        ballStatus = ballGroupAuton.getCheckedRadioButtonId();
-                        ballRadioButtonAuton = (RadioButton)findViewById(ballStatus);
+                        if(ballLowGoalAuton.isChecked()){
+                            teamArray [4] = Integer.toString(numBallsAuton);
+                            teamArray [5] = "0";
+                        } else if(ballHighGoalAuton.isChecked()){
+                            teamArray [4] = "0";
+                            teamArray [5] = Integer.toString(numBallsAuton);
 
-                        teamArray [3] = ballRadioButtonAuton.getText().toString();
+                        } else{
+                            teamArray [4] = "0";
+                            teamArray [5] = "0";
+                        }
 
-                        gearStatus = gearGroupAuton.getCheckedRadioButtonId();
-                        gearRadioButtonAuton = (RadioButton)findViewById(gearStatus);
+                        if(gearScoredAuton.isChecked()){
+                            teamArray [3] = "1";
+                        } else {
+                            teamArray [3] = "0";
+                        }
 
-                        teamArray [4] = gearRadioButtonAuton.getText().toString();
 
                         teamArray [5] =  Integer.toString(numBallsAuton);
 

@@ -13,8 +13,8 @@ import android.widget.TextView;
 public class AutonMenu2 extends AppCompatActivity {
     Button goToTeleop;
     CheckBox crossBaseline;
-    ImageButton subtractFoulsAuton, addFoulsAuton, subtractTechFoulsAuton, addTechFoulsAuton, subtractRoboErrorsAuton, addRoboErrorsAuton;
-    Integer numFouls, numTechFouls, numRoboErrors;
+    ImageButton subtractYCardsAuton, addYCardsAuton, subtractTechFoulsAuton, addTechFoulsAuton;
+    Integer numYellowCards, numTechFouls;
     TextView numFoulsAuton, numTechFoulsAuton, numRoboErrorsAuton;
     Intent auton2Array, startActivityAutonMenu2;
     String [] teamArray;
@@ -23,9 +23,8 @@ public class AutonMenu2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auton_menu2);
-        numFouls = 0;
+        numYellowCards= 0;
         numTechFouls = 0;
-        numRoboErrors = 0;
         auton2Array = getIntent();
         teamArray = auton2Array.getStringArrayExtra("AutonArray");
         autonMenu2Run();
@@ -35,18 +34,14 @@ public class AutonMenu2 extends AppCompatActivity {
 
         goToTeleop = (Button) findViewById(R.id.goToTeleop);
 
-        subtractFoulsAuton = (ImageButton) findViewById(R.id.subtractFoulsAuton);
-        addFoulsAuton = (ImageButton) findViewById(R.id.addFoulsAuton);
+        subtractYCardsAuton = (ImageButton) findViewById(R.id.subtractFoulsAuton);
+        addYCardsAuton = (ImageButton) findViewById(R.id.addFoulsAuton);
 
         subtractTechFoulsAuton = (ImageButton) findViewById(R.id.subtractTechFoulsAuton);
         addTechFoulsAuton = (ImageButton) findViewById(R.id.addTechFoulsAuton);
 
-        subtractRoboErrorsAuton = (ImageButton) findViewById(R.id.subtractRoboErrorsAuton);
-        addRoboErrorsAuton = (ImageButton) findViewById(R.id.addRoboErrorsAuton);
-
         numFoulsAuton = (TextView)findViewById(R.id.foulsAuton);
         numTechFoulsAuton = (TextView)findViewById(R.id.techFoulsAuton);
-        numRoboErrorsAuton = (TextView)findViewById(R.id.robotErrorsAuton);
 
         crossBaseline = (CheckBox) findViewById(R.id.crossBaseline);
 
@@ -55,20 +50,16 @@ public class AutonMenu2 extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        teamArray [6] = numFouls.toString();
+                        teamArray [13] = numTechFouls.toString();
 
-
-                        teamArray [7] = numTechFouls.toString();
-
-
-                        teamArray [8] = numRoboErrors.toString();
+                        teamArray [14] = numYellowCards.toString();
 
 
                         if (crossBaseline.isChecked()) {
-                            teamArray [9] = "1";
+                            teamArray [2] = "1";
 
                         } else {
-                            teamArray [10] =  "0";
+                            teamArray [2] =  "0";
 
                         }
 
@@ -80,25 +71,25 @@ public class AutonMenu2 extends AppCompatActivity {
                 }
 
         );
-        subtractFoulsAuton.setOnClickListener(
+        subtractYCardsAuton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        numFouls = numFouls - 1;
-                        numFoulsAuton.setText("     # Fouls: " + Integer.toString(numFouls));
+                        numYellowCards= numYellowCards- 1;
+                        numFoulsAuton.setText("     # Fouls: " + Integer.toString(numYellowCards));
 
                     }
                 }
 
         );
-        addFoulsAuton.setOnClickListener(
+        addYCardsAuton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        numFouls = numFouls + 1;
-                        numFoulsAuton.setText("     # Fouls: " + Integer.toString(numFouls));
+                        numYellowCards= numYellowCards+ 1;
+                        numFoulsAuton.setText("     # Fouls: " + Integer.toString(numYellowCards));
                     }
                 }
 
@@ -125,28 +116,6 @@ public class AutonMenu2 extends AppCompatActivity {
                 }
 
         );
-        subtractRoboErrorsAuton.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        numRoboErrors = numRoboErrors - 1;
-                        numRoboErrorsAuton.setText("   # R Errors: " + Integer.toString(numRoboErrors));
-                    }
-                }
-
-        );
-        addRoboErrorsAuton.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        numRoboErrors = numRoboErrors + 1;
-                        numRoboErrorsAuton.setText("   # R Errors: " + Integer.toString(numRoboErrors));
-                    }
-                }
-
-        );
-
     }
 }
 
