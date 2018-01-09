@@ -226,7 +226,9 @@
         app:layout_constraintTop_toBottomOf="@+id/addFoulsAuton"
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="-3dp" />
 
     <ImageButton
         android:id="@+id/subtractTechFoulsAuton"

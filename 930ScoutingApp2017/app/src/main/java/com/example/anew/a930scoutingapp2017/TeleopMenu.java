@@ -95,9 +95,9 @@ public class TeleopMenu extends AppCompatActivity {
         );
 
         subtractBallsTeleop.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                            new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
                         ballsTeleop = ballsTeleop - 1;
                         numBallsTeleop.setTextSize(30);
                         numBallsTeleop.setText("# Balls: " + Integer.toString(ballsTeleop));
